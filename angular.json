@@ -145,6 +145,43 @@
           }
         }
       }
+    },
+    "icons-twemoji": {
+      "projectType": "library",
+      "root": "libs/icons/twemoji",
+      "sourceRoot": "libs/icons/twemoji/src",
+      "prefix": "ngx-nations",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/icons/twemoji/tsconfig.lib.json",
+            "project": "libs/icons/twemoji/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/icons/twemoji/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/icons/twemoji/src/**/*.ts",
+              "libs/icons/twemoji/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/icons/twemoji"],
+          "options": {
+            "jestConfig": "libs/icons/twemoji/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }

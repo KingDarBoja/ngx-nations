@@ -14,7 +14,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "ngx-nations/twemoji-icons": ["libs/icons/twemoji/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
