@@ -1,0 +1,16 @@
+[
+  {
+    "conversionType": "files",
+    "srcFiles": [
+      "./libs/icons/twemoji/src/svg/**/*.svg"
+    ],
+    "outputDirectory": "./libs/icons/twemoji/src/lib/icons",
+    "interfaceName": "NgxNationIconTwemoji",
+    "typeName": "ngxNationIconTwemoji",
+    "prefix": "ngxNationIconTwemoji",
+    "exportCompleteIconSet": true,
+    "optimizeForLazyLoading": true,
+    "modelFileName": "icons-twemoji.model",
+    "compileSources": true
+  },
+]

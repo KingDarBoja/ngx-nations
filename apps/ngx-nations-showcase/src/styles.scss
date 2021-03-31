@@ -1,1 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer components {
+  .section-title {
+    @apply mb-2 font-semibold text-lg;
+  }
+
+  .section-subtitle {
+    @apply font-semibold text-base mb-2;
+  }
+
+  .country-grid {
+    @apply grid grid-cols-4 gap-2;
+  }
+
+  .country-item {
+    @apply flex flex-col items-center;
+  }
+
+  .country-name {
+    @apply text-sm font-normal truncate;
+  }
+
+  .country-code {
+    @apply text-sm;
+  }
+
+  @screen md {
+    .country-grid {
+      @apply grid-cols-8;
+    }
+  }
+
+  @screen lg {
+    .country-grid {
+      @apply grid-cols-10;
+    }
+  }
+}

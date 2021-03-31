@@ -1,0 +1,38 @@
+<h1 class="section-title">Africa Section</h1>
+
+<div class="py-2">
+  <h3 class="section-subtitle">Tree-shakeable Demo</h3>
+
+  <div class="country-grid">
+    <div class="country-item">
+      <p class="country-name">Tanzania</p>
+      <p class="country-code">tz</p>
+      <ngx-nations-icon-tw [icon]="'ac'" fontSize="50px"></ngx-nations-icon-tw>
+    </div>
+    <div class="country-item">
+      <p class="country-name">Colombia</p>
+      <p class="country-code">co</p>
+      <ngx-nations-icon-tw [icon]="'co'" fontSize="50px"></ngx-nations-icon-tw>
+    </div>
+    <div class="country-item">
+      <p class="country-name">Spain</p>
+      <p class="country-code">es</p>
+      <ngx-nations-icon-tw [icon]="'es'" fontSize="50px"></ngx-nations-icon-tw>
+    </div>
+  </div>
+</div>
+
+<div class="py-2">
+  <h3 class="section-subtitle">All Africa Country Flags</h3>
+  <div class="country-grid">
+    <div class="col-span-1 mb-3" *ngFor="let country of countries">
+      <div class="items-center text-center">
+        <p class="country-name">{{ country.name }}</p>
+        <p class="country-code">{{ country.iconCode }}</p>
+        <div class="country-item">
+          <ngx-nations-icon-tw [icon]="country.iconCode"></ngx-nations-icon-tw>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
