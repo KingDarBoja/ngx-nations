@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { SvgIconsModule } from '@ngneat/svg-icon';
 
 import {
-  ngxNationIconTwemojiAc,
+  ngxNationIconTwemojiEs,
   NgxNationsIconsTwemojiModule,
 } from 'ngx-nations/twemoji-icons';
 
@@ -16,7 +16,7 @@ import { AppRoutingModule } from './app.routing';
     BrowserModule,
     AppRoutingModule,
     SvgIconsModule.forRoot({
-      icons: [ngxNationIconTwemojiAc],
+      icons: [ngxNationIconTwemojiEs],
     }),
     NgxNationsIconsTwemojiModule,
   ],
