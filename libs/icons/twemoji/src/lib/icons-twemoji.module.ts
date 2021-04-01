@@ -3,7 +3,7 @@ import { SvgIconsModule } from '@ngneat/svg-icon';
 import { NgxNationIconTwemojiComponent } from './icons-twemoji.component';
 
 @NgModule({
-  imports: [SvgIconsModule.forRoot()],
+  imports: [SvgIconsModule],
   declarations: [NgxNationIconTwemojiComponent],
   exports: [NgxNationIconTwemojiComponent],
 })

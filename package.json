@@ -26,7 +26,9 @@
     "workspace-generator": "nx workspace-generator",
     "dep-graph": "nx dep-graph",
     "help": "nx help",
-    "generate-icons": "svg-to-ts"
+    "generate-icons": "svg-to-ts",
+    "analyzer": "source-map-explorer --html result.html",
+    "analyze:showcase": "nx run icons-twemoji:build:production && nx run ngx-nations-showcase:build --prod --namedChunks --sourceMap && npm run analyzer -- './dist/apps/ngx-nations-showcase/*.js'"
   },
   "private": true,
   "dependencies": {
@@ -77,6 +79,7 @@
     "postcss": "8",
     "postcss-ng-tailwind-in-components": "0.0.4",
     "prettier": "2.2.1",
+    "source-map-explorer": "^2.5.2",
     "svg-to-ts": "^6.0.0",
     "tailwindcss": "2.0.4",
     "ts-jest": "26.4.0",
