@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { SvgIconsModule } from '@ngneat/svg-icon';
-import { NgxNationsFlagIconModule } from 'ngx-nations/flag-icon';
+import { NgxNationsFlagIconModule } from '@ngx-nations/flag-icon';
 import {
   ngxNationFlagIconAg,
   ngxNationFlagIconAr,

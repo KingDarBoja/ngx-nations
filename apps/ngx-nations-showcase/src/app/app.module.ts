@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { SvgIconsModule } from '@ngneat/svg-icon';
 
-import { NgxNationsFlagIconModule } from 'ngx-nations/flag-icon';
+import { NgxNationsFlagIconModule } from '@ngx-nations/flag-icon';
 import { ngxNationFlagIconEs } from 'dist/libs/flag-icon/icons';
 
 import { AppComponent } from './app.component';

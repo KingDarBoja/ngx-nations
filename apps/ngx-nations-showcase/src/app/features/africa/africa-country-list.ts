@@ -1,4 +1,4 @@
-import { NgxNationFlagIcon } from 'ngx-nations/flag-icon';
+import { NgxNationFlagIcon } from '@ngx-nations/flag-icon';
 
 interface NationData {
   name: string;

@@ -1,4 +1,4 @@
-# ngx-nations/flag-icon
+# @ngx-nations/flag-icon
 
 This library was generated with [Nx](https://nx.dev).
 
