@@ -21,6 +21,6 @@
       "tags": [],
       "implicitDependencies": ["ngx-nations-showcase"]
     },
-    "icons-twemoji": { "tags": ["type:ui"] }
+    "flag-icon": { "tags": ["scope:public", "type:ui"] }
   }
 }

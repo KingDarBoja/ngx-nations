@@ -149,21 +149,21 @@
         }
       }
     },
-    "icons-twemoji": {
+    "flag-icon": {
       "projectType": "library",
-      "root": "libs/icons/twemoji",
-      "sourceRoot": "libs/icons/twemoji/src",
+      "root": "libs/flag-icon",
+      "sourceRoot": "libs/flag-icon/src",
       "prefix": "ngx-nations",
       "architect": {
         "build": {
           "builder": "@nrwl/angular:package",
           "options": {
-            "tsConfig": "libs/icons/twemoji/tsconfig.lib.json",
-            "project": "libs/icons/twemoji/ng-package.json"
+            "tsConfig": "libs/flag-icon/tsconfig.lib.json",
+            "project": "libs/flag-icon/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "libs/icons/twemoji/tsconfig.lib.prod.json"
+              "tsConfig": "libs/flag-icon/tsconfig.lib.prod.json"
             }
           }
         },
@@ -171,16 +171,16 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/icons/twemoji/src/**/*.ts",
-              "libs/icons/twemoji/src/**/*.html"
+              "libs/flag-icon/src/**/*.ts",
+              "libs/flag-icon/src/**/*.html"
             ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/icons/twemoji"],
+          "outputs": ["coverage/libs/flag-icon"],
           "options": {
-            "jestConfig": "libs/icons/twemoji/jest.config.js",
+            "jestConfig": "libs/flag-icon/jest.config.js",
             "passWithNoTests": true
           }
         }

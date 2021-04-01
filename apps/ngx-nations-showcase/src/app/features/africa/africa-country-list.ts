@@ -1,8 +1,8 @@
-import { ngxNationIconTwemoji } from 'ngx-nations/twemoji-icons';
+import { NgxNationFlagIcon } from 'ngx-nations/flag-icon';
 
 interface NationData {
   name: string;
-  iconCode: ngxNationIconTwemoji | string;
+  iconCode: NgxNationFlagIcon | string;
 }
 export const AfricaCountries: NationData[] = [
   {
@@ -58,7 +58,7 @@ export const AfricaCountries: NationData[] = [
     iconCode: 'cd',
   },
   {
-    name: "COTE D'IVOIRE",
+    name: 'COTE D\'IVOIRE',
     iconCode: 'ci',
   },
   {

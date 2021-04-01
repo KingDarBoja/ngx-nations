@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "ngx-nations/twemoji-icons": ["libs/icons/twemoji/src/index.ts"]
+      "ngx-nations/flag-icon/*": ["libs/flag-icon/*", "libs/flag-icon"],
+      "ngx-nations/flag-icon": ["dist/libs/flag-icon/*", "dist/libs/flag-icon"]
     }
   },
   "exclude": ["node_modules", "tmp"]
