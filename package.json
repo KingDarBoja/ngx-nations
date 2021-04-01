@@ -27,9 +27,9 @@
     "dep-graph": "nx dep-graph",
     "help": "nx help",
     "generate-icons": "svg-to-ts",
-    "build:flag-icon:lib": "nx run flag-icon:build --prod --skip-nx-cache && yarn run generate-icons",
+    "build:icon:lib": "nx run icon:build --prod --skip-nx-cache && yarn run generate-icons",
     "analyzer": "source-map-explorer --html result.html",
-    "analyze:showcase": "yarn run build:flag-icon:lib && nx run ngx-nations-showcase:build --prod --named-chunks --source-map && npm run analyzer -- './dist/apps/ngx-nations-showcase/*.js'"
+    "analyze:showcase": "yarn run build:icon:lib && nx run ngx-nations-showcase:build --prod --named-chunks --source-map && npm run analyzer -- './dist/apps/ngx-nations-showcase/*.js'"
   },
   "private": true,
   "dependencies": {

@@ -1,26 +1,37 @@
 {
   "implicitDependencies": {
     "angular.json": "*",
-    "package.json": { "dependencies": "*", "devDependencies": "*" },
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
     "tsconfig.base.json": "*",
     "tslint.json": "*",
     ".eslintrc.json": "*",
     "nx.json": "*"
   },
-  "affected": { "defaultBase": "master" },
+  "affected": {
+    "defaultBase": "master"
+  },
   "npmScope": "ngx-nations",
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
-      "options": { "cacheableOperations": ["build", "lint", "test", "e2e"] }
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
+      }
     }
   },
   "projects": {
-    "ngx-nations-showcase": { "tags": [] },
+    "ngx-nations-showcase": {
+      "tags": []
+    },
     "ngx-nations-showcase-e2e": {
       "tags": [],
       "implicitDependencies": ["ngx-nations-showcase"]
     },
-    "flag-icon": { "tags": ["scope:public", "type:ui"] }
+    "icon": {
+      "tags": ["scope:public", "type:ui"]
+    }
   }
 }

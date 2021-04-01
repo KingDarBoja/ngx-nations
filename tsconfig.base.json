@@ -15,8 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@ngx-nations/flag-icon/*": ["libs/flag-icon/*", "libs/flag-icon"],
-      "@ngx-nations/flag-icon": ["dist/libs/flag-icon/*", "dist/libs/flag-icon"]
+      "@ngx-nations/icon/*": ["libs/icon/*", "libs/icon"],
+      "@ngx-nations/icon": ["dist/libs/icon/*", "dist/libs/icon"]
     }
   },
   "exclude": ["node_modules", "tmp"]

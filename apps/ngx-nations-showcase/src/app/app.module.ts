@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { SvgIconsModule } from '@ngneat/svg-icon';
 
-import { NgxNationsFlagIconModule } from '@ngx-nations/flag-icon';
-import { ngxNationFlagIconEs } from 'dist/libs/flag-icon/icons';
+import { NgxNationsIconModule } from '@ngx-nations/icon';
+import { flagEs } from 'dist/libs/icon/tw-icons';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing';
@@ -14,9 +14,9 @@ import { AppRoutingModule } from './app.routing';
     BrowserModule,
     AppRoutingModule,
     SvgIconsModule.forRoot({
-      icons: [ngxNationFlagIconEs],
+      icons: [flagEs],
     }),
-    NgxNationsFlagIconModule,
+    NgxNationsIconModule,
   ],
   bootstrap: [AppComponent],
 })

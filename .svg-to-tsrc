@@ -4,10 +4,25 @@
     "srcFiles": [
       "./icons/twemoji/**/*.svg"
     ],
-    "outputDirectory": "./dist/libs/flag-icon/icons",
-    "interfaceName": "NgxNationFlagIcon",
-    "typeName": "ngxNationFlagIcon",
-    "prefix": "ngxNationFlagIcon",
+    "outputDirectory": "./dist/libs/icon/tw-icons",
+    "interfaceName": "Flag",
+    "typeName": "flag",
+    "prefix": "flag",
+    "exportCompleteIconSet": true,
+    "optimizeForLazyLoading": true,
+    "modelFileName": "icon.model",
+    "compileSources": true
+  },
+  {
+    "conversionType": "files",
+    "srcFiles": [
+      "./icons/lipis/**/*.svg"
+    ],
+    "outputDirectory": "./dist/libs/icon/lp-icons",
+    "interfaceName": "Flag",
+    "typeName": "flag",
+    "prefix": "flag",
+    "exportCompleteIconSet": true,
     "optimizeForLazyLoading": true,
     "modelFileName": "icon.model",
     "compileSources": true

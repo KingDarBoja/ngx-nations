@@ -1,8 +1,8 @@
-import { NgxNationFlagIcon } from '@ngx-nations/flag-icon';
+import { NgxNationIcon } from '@ngx-nations/icon';
 
 interface NationData {
   name: string;
-  iconCode: NgxNationFlagIcon | string;
+  iconCode: NgxNationIcon | string;
 }
 export const AfricaCountries: NationData[] = [
   {
