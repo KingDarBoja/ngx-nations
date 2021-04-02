@@ -3,6 +3,14 @@
 This is a work in progress!
 ---------------------------
 
+## Usage
+
+Take a look at each package for its usage.
+
+|       package        |     version    |                 docs                 |
+| :-----------------:  | :-----------:  | :----------------------------------: |
+| `ngx-nations/icon`   |                | [readme](libs/icon/README.md)        |
+
 ## Development
 
 This project was developed using [Nx Workspaces](https://nx.dev/angular), which enables development of monorepos like official Angular or Google projects.
