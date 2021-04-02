@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { getName, registerLocale } from 'i18n-iso-countries';
+import { LocaleEN } from 'i18n-iso-countries/langs';
 
 @Component({
   selector: 'ngx-nations-root',
@@ -7,4 +9,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ngx-nations-showcase';
+
+  constructor() {
+    registerLocale(LocaleEN);
+    console.log(getName('co', 'en'));
+    console.log(getName('co', 'es'));
+  }
 }

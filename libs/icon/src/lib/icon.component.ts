@@ -6,6 +6,7 @@ import { NgxNationIcon } from './icon.model';
   template: `
     <div class="">
       <svg-icon [key]="icon" [size]="size" [fontSize]="fontSize"></svg-icon>
+      <div>{{ icon | nationName }}</div>
     </div>
   `,
   styles: [
