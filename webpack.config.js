@@ -1,5 +1,5 @@
 const { addTailwindPlugin } = require('@ngneat/tailwind');
-const tailwindConfig = require('./tailwind.config.js');
+const tailwindConfig = require('./tailwind.js');
 
 module.exports = (config) => {
   addTailwindPlugin({
