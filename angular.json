@@ -268,6 +268,70 @@
           }
         }
       }
+    },
+    "tw-icons": {
+      "root": "libs/tw-icons",
+      "sourceRoot": "libs/tw-icons/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/tw-icons/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/tw-icons"],
+          "options": {
+            "jestConfig": "libs/tw-icons/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "builder": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/tw-icons",
+            "tsConfig": "libs/tw-icons/tsconfig.lib.json",
+            "packageJson": "libs/tw-icons/package.json",
+            "main": "libs/tw-icons/src/index.ts",
+            "assets": ["libs/tw-icons/*.md"]
+          }
+        }
+      }
+    },
+    "lp-icons": {
+      "root": "libs/lp-icons",
+      "sourceRoot": "libs/lp-icons/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/lp-icons/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/lp-icons"],
+          "options": {
+            "jestConfig": "libs/lp-icons/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "builder": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/lp-icons",
+            "tsConfig": "libs/lp-icons/tsconfig.lib.json",
+            "packageJson": "libs/lp-icons/package.json",
+            "main": "libs/lp-icons/src/index.ts",
+            "assets": ["libs/lp-icons/*.md"]
+          }
+        }
+      }
     }
   }
 }

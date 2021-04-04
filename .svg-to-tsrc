@@ -4,8 +4,8 @@
     "srcFiles": [
       "./icons/twemoji/**/*.svg"
     ],
-    "outputDirectory": "./dist/libs/icon/tw-icons",
-    "additionalModelOutputPath": "./dist/libs/icon/tw-icons/types",
+    "outputDirectory": "./libs/tw-icons/src",
+    "additionalModelOutputPath": "./libs/tw-icons/src/lib/types",
     "interfaceName": "Flag",
     "typeName": "flag",
     "prefix": "flag",
@@ -13,7 +13,7 @@
     "exportCompleteIconSet": true,
     "optimizeForLazyLoading": true,
     "modelFileName": "icon.model",
-    "compileSources": true,
+    "compileSources": false,
     "svgoConfig": {
       "plugins": [
         {
@@ -27,8 +27,8 @@
     "srcFiles": [
       "./icons/lipis/**/*.svg"
     ],
-    "outputDirectory": "./dist/libs/icon/lp-icons",
-    "additionalModelOutputPath": "./dist/libs/icon/lp-icons/types",
+    "outputDirectory": "./libs/lp-icons/src",
+    "additionalModelOutputPath": "./libs/lp-icons/src/lib/types",
     "interfaceName": "Flag",
     "typeName": "flag",
     "prefix": "flag",
@@ -36,7 +36,7 @@
     "exportCompleteIconSet": true,
     "optimizeForLazyLoading": true,
     "modelFileName": "icon.model",
-    "compileSources": true,
+    "compileSources": false,
     "svgoConfig": {
       "plugins": [
         {

@@ -41,7 +41,7 @@ import {
   flagUy,
   flagVc,
   flagVe,
-} from '@ngx-nations/icon/tw-icons';
+} from '@ngx-nations/tw-icons';
 
 import { AmericaComponent } from './america.component';
 import { AmericaRoutingModule } from './america.routing';

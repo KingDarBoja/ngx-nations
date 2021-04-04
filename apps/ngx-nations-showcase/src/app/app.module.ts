@@ -4,7 +4,7 @@ import { SvgIconsModule } from '@ngneat/svg-icon';
 import { NgxNationsCoreModule } from '@ngx-nations/core';
 
 import { NgxNationsIconModule } from '@ngx-nations/icon';
-import { flagUa } from '@ngx-nations/icon/tw-icons';
+import { flagUa } from '@ngx-nations/tw-icons';
 import {
   LocaleEN,
   LocaleES,

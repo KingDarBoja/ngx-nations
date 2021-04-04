@@ -17,8 +17,8 @@
     "paths": {
       "@ngx-nations/core": ["libs/core/src/index.ts"],
       "@ngx-nations/icon": ["libs/icon/src/index.ts"],
-      "@ngx-nations/icon/tw-icons": ["dist/libs/icon/tw-icons/index.js"],
-      "@ngx-nations/icon/lp-icons": ["dist/libs/icon/lp-icons/index.js"]
+      "@ngx-nations/tw-icons": ["libs/tw-icons/src/index.ts"],
+      "@ngx-nations/lp-icons": ["libs/lp-icons/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

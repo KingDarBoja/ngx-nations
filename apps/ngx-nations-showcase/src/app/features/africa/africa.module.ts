@@ -59,7 +59,7 @@ import {
   flagZa,
   flagZm,
   flagZw,
-} from '@ngx-nations/icon/tw-icons';
+} from '@ngx-nations/tw-icons';
 
 import { AfricaComponent } from './africa.component';
 import { AfricaRoutingModule } from './africa.routing';

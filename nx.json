@@ -22,6 +22,8 @@
       "implicitDependencies": ["ngx-nations-showcase"]
     },
     "icon": { "tags": ["scope:public", "type:ui"] },
-    "core": { "tags": ["scope:public", "type:core"] }
+    "core": { "tags": ["scope:public", "type:core"] },
+    "tw-icons": { "tags": ["scope:public", "type:icon"] },
+    "lp-icons": { "tags": ["scope:public", "type:icon"] }
   }
 }
