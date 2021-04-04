@@ -12,6 +12,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./features/africa/africa.module').then((m) => m.AfricaModule),
   },
+  {
+    path: 'asia',
+    loadChildren: () =>
+      import('./features/asia/asia.module').then((m) => m.AsiaModule),
+  },
 ];
 
 @NgModule({

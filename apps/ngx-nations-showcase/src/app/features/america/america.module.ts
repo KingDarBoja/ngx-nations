@@ -45,6 +45,7 @@ import {
 
 import { AmericaComponent } from './america.component';
 import { AmericaRoutingModule } from './america.routing';
+import { CountryListModule } from '../country-list/country-list.module';
 
 @NgModule({
   declarations: [AmericaComponent],
@@ -90,6 +91,7 @@ import { AmericaRoutingModule } from './america.routing';
       flagVc,
       flagVe,
     ]),
+    CountryListModule,
     NgxNationsIconModule,
   ],
 })

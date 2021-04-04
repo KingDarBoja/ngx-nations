@@ -4,7 +4,7 @@ import { SvgIconsModule } from '@ngneat/svg-icon';
 import { NgxNationsCoreModule } from '@ngx-nations/core';
 
 import { NgxNationsIconModule } from '@ngx-nations/icon';
-import { flagEs } from '@ngx-nations/icon/tw-icons';
+import { flagUa } from '@ngx-nations/icon/tw-icons';
 import { LocaleFR } from 'i18n-iso-countries/langs';
 
 import { AppComponent } from './app.component';
@@ -16,7 +16,7 @@ import { AppRoutingModule } from './app.routing';
     BrowserModule,
     AppRoutingModule,
     SvgIconsModule.forRoot({
-      icons: [flagEs],
+      icons: [flagUa],
     }),
     NgxNationsCoreModule.forRoot({
       defaultLocale: LocaleFR,

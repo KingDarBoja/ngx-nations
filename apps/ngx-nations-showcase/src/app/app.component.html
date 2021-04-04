@@ -14,11 +14,13 @@
   <div class="container mx-auto">
     <h1 class="mb-2 font-semibold text-white text-lg">Lazy Loaded Modules</h1>
     <ul class="flex items-center">
-      <li class="flex mr-6 border border-white rounded-full">
-        <a class="text-white p-4" routerLink="america">America</a>
-      </li>
-      <li class="flex mr-6 border border-white rounded-full">
-        <a class="text-white p-4" routerLink="africa">Africa</a>
+      <li
+        *ngFor="let continent of continents"
+        class="flex mr-6 border border-white rounded-full"
+      >
+        <a class="text-white p-4" [routerLink]="continent">{{
+          continent | uppercase
+        }}</a>
       </li>
     </ul>
   </div>
@@ -40,9 +42,14 @@
         <ngx-nations-icon [icon]="'tz'" fontSize="50px"></ngx-nations-icon>
       </div>
       <div class="country-item">
-        <p class="country-name">Spain</p>
-        <p class="country-code">es</p>
-        <ngx-nations-icon [icon]="'es'" fontSize="50px"></ngx-nations-icon>
+        <p class="country-name">Ukraine</p>
+        <p class="country-code">ua</p>
+        <ngx-nations-icon [icon]="'ua'" fontSize="50px"></ngx-nations-icon>
+      </div>
+      <div class="country-item">
+        <p class="country-name">Tajikistan</p>
+        <p class="country-code">tj</p>
+        <ngx-nations-icon [icon]="'tj'" fontSize="50px"></ngx-nations-icon>
       </div>
     </div>
   </div>

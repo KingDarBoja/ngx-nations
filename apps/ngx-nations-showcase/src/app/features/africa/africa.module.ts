@@ -63,6 +63,7 @@ import {
 
 import { AfricaComponent } from './africa.component';
 import { AfricaRoutingModule } from './africa.routing';
+import { CountryListModule } from '../country-list/country-list.module';
 
 @NgModule({
   declarations: [AfricaComponent],
@@ -126,6 +127,7 @@ import { AfricaRoutingModule } from './africa.routing';
       flagZm,
       flagZw,
     ]),
+    CountryListModule,
     NgxNationsIconModule,
   ],
 })

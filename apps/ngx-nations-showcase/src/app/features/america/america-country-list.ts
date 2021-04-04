@@ -1,9 +1,4 @@
-import { NgxNationIcon } from '@ngx-nations/icon';
-
-interface NationData {
-  name: string;
-  iconCode: NgxNationIcon | string;
-}
+import { NationData } from '../country-list/country-list.component';
 
 export const AmericaCountries: NationData[] = [
   {
