@@ -27,7 +27,7 @@ export const AsiaCountries: NationData[] = [
   },
   {
     name: 'Brunei',
-    iconCode: 'io',
+    iconCode: 'bn',
   },
   {
     name: 'Cambodia',
@@ -35,7 +35,7 @@ export const AsiaCountries: NationData[] = [
   },
   {
     name: 'China',
-    iconCode: 'ch',
+    iconCode: 'cn',
   },
   {
     name: 'Cocos Islands',
