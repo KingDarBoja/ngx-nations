@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { getName, registerLocale } from 'i18n-iso-countries';
-import { LocaleEN } from 'i18n-iso-countries/langs';
+import { NgxNationsCoreService } from '@ngx-nations/core';
+import { map, startWith } from 'rxjs/operators';
 
 @Component({
   selector: 'ngx-nations-root',
@@ -9,10 +9,17 @@ import { LocaleEN } from 'i18n-iso-countries/langs';
 export class AppComponent {
   title = 'ngx-nations-showcase';
   continents = ['america', 'africa', 'asia'];
+  locales = this.config.getLocales();
+  currentLocale$ = this.config.locale$.pipe(
+    startWith([]),
+    map(() => this.config.locale())
+  );
+  menuVisible = false;
 
-  constructor() {
-    registerLocale(LocaleEN);
-    console.log(getName('co', 'en'));
-    console.log(getName('co', 'es'));
+  constructor(private readonly config: NgxNationsCoreService) {}
+
+  changeLocale(locale: string) {
+    this.config.setLocale(locale);
+    this.menuVisible = false;
   }
 }

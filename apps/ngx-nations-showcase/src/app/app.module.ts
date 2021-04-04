@@ -5,7 +5,12 @@ import { NgxNationsCoreModule } from '@ngx-nations/core';
 
 import { NgxNationsIconModule } from '@ngx-nations/icon';
 import { flagUa } from '@ngx-nations/icon/tw-icons';
-import { LocaleFR } from 'i18n-iso-countries/langs';
+import {
+  LocaleEN,
+  LocaleES,
+  LocaleFR,
+  LocalePT,
+} from 'i18n-iso-countries/langs';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing';
@@ -19,7 +24,7 @@ import { AppRoutingModule } from './app.routing';
       icons: [flagUa],
     }),
     NgxNationsCoreModule.forRoot({
-      defaultLocale: LocaleFR,
+      locales: [LocaleEN, LocaleES, LocaleFR, LocalePT],
     }),
     NgxNationsIconModule,
   ],

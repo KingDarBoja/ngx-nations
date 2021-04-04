@@ -16,7 +16,7 @@ export function NgxNationsLocalesFactory(
 ): NgxNationsCoreService {
   const defaultConfig: NgxNationsCoreConfig = {
     locales: config.locales || [],
-    defaultLocale: config.defaultLocale || (LocaleEN as NgxNationsLocaleData),
+    defaultLocale: config.defaultLocale || LocaleEN,
   };
   const locales = new Set<NgxNationsLocaleData>(
     [].concat(defaultConfig.locales, [defaultConfig.defaultLocale]),
