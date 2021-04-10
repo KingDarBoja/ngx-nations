@@ -54,7 +54,7 @@ import {
   flagUz,
   flagVn,
   flagYe,
-} from '@ngx-nations/icon/tw-icons';
+} from '@ngx-nations/tw-icons';
 
 import { AsiaComponent } from './asia.component';
 import { AsiaRoutingModule } from './asia.routing';
