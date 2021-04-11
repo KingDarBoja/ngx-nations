@@ -1,6 +1,6 @@
-import { NationData } from '../country-list/country-list.component';
+import { NationData } from '../../shared/list/list.component';
 
-export const AsiaCountries: NationData[] = [
+export const AsiaNations: ReadonlyArray<NationData> = [
   {
     name: 'Afghanistan',
     iconCode: 'af',
@@ -201,4 +201,4 @@ export const AsiaCountries: NationData[] = [
     name: 'Yemen',
     iconCode: 'ye',
   },
-]
+] as const;

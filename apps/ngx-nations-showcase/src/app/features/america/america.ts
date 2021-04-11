@@ -1,6 +1,6 @@
-import { NationData } from '../country-list/country-list.component';
+import { NationData } from '../../shared/list/list.component';
 
-export const AmericaCountries: NationData[] = [
+export const AmericaNations: ReadonlyArray<NationData> = [
   {
     name: 'ANTIGUA and BARBUDA',
     iconCode: 'ag',
@@ -149,4 +149,4 @@ export const AmericaCountries: NationData[] = [
     name: 'VENEZUELA',
     iconCode: 've',
   },
-];
+] as const;

@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import { AsiaNations } from './asia';
+import { OceaniaNations } from './oceania';
 
 @Component({
   template: `
     <ngx-nations-list
-      [title]="'Asia'"
+      [title]="'Oceania'"
       [nations]="nations"
     ></ngx-nations-list>
   `,
 })
-export class AsiaComponent {
-  readonly nations = AsiaNations;
+export class OceaniaComponent {
+  readonly nations = OceaniaNations;
 }

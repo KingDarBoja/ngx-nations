@@ -7,10 +7,10 @@ import { map, startWith } from 'rxjs/operators';
   templateUrl: './app.component.html',
 })
 export class AppComponent {
-  title = 'ngx-nations-showcase';
-  continents = ['america', 'africa', 'asia'];
-  locales = this.config.getLocales();
-  currentLocale$ = this.config.locale$.pipe(
+  readonly title = 'ngx-nations-showcase';
+  readonly continents = ['america', 'africa', 'asia', 'europe', 'oceania'];
+  readonly locales = this.config.getLocales();
+  readonly currentLocale$ = this.config.locale$.pipe(
     startWith([]),
     map(() => this.config.locale())
   );

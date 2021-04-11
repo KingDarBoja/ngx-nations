@@ -45,13 +45,15 @@ import {
 
 import { AmericaComponent } from './america.component';
 import { AmericaRoutingModule } from './america.routing';
-import { CountryListModule } from '../country-list/country-list.module';
+import { NationListModule } from '../../shared/list/list.module';
 
 @NgModule({
   declarations: [AmericaComponent],
   imports: [
     CommonModule,
     AmericaRoutingModule,
+    NationListModule,
+    NgxNationsIconModule,
     SvgIconsModule.forChild([
       flagAg,
       flagAr,
@@ -91,8 +93,6 @@ import { CountryListModule } from '../country-list/country-list.module';
       flagVc,
       flagVe,
     ]),
-    CountryListModule,
-    NgxNationsIconModule,
   ],
 })
 export class AmericaModule {}

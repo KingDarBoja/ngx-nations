@@ -12,30 +12,30 @@
     @apply font-semibold text-base mb-2;
   }
 
-  .country-grid {
+  .nation-grid {
     @apply grid grid-cols-4 gap-2;
   }
 
-  .country-item {
-    @apply flex flex-col items-center;
+  .nation-item {
+    @apply flex flex-col items-center text-center;
   }
 
-  .country-name {
-    @apply text-sm font-normal truncate;
+  .nation-name {
+    @apply text-sm font-normal;
   }
 
-  .country-code {
+  .nation-code {
     @apply text-sm;
   }
 
   @screen md {
-    .country-grid {
+    .nation-grid {
       @apply grid-cols-8;
     }
   }
 
   @screen lg {
-    .country-grid {
+    .nation-grid {
       @apply grid-cols-10;
     }
   }

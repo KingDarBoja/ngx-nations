@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CountryListComponent } from './country-list.component';
+import { NationListComponent } from './list.component';
 import { NgxNationsIconModule } from '@ngx-nations/icon';
 
 @NgModule({
   imports: [CommonModule, NgxNationsIconModule],
-  exports: [CountryListComponent],
-  declarations: [CountryListComponent],
+  exports: [NationListComponent],
+  declarations: [NationListComponent],
 })
-export class CountryListModule { }
+export class NationListModule { }

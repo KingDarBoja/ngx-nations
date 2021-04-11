@@ -63,13 +63,15 @@ import {
 
 import { AfricaComponent } from './africa.component';
 import { AfricaRoutingModule } from './africa.routing';
-import { CountryListModule } from '../country-list/country-list.module';
+import { NationListModule } from '../../shared/list/list.module';
 
 @NgModule({
   declarations: [AfricaComponent],
   imports: [
     CommonModule,
     AfricaRoutingModule,
+    NationListModule,
+    NgxNationsIconModule,
     SvgIconsModule.forChild([
       flagAo,
       flagBf,
@@ -127,8 +129,6 @@ import { CountryListModule } from '../country-list/country-list.module';
       flagZm,
       flagZw,
     ]),
-    CountryListModule,
-    NgxNationsIconModule,
   ],
 })
 export class AfricaModule {}

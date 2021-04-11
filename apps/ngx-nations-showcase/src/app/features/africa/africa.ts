@@ -1,6 +1,6 @@
-import { NationData } from '../country-list/country-list.component';
+import { NationData } from '../../shared/list/list.component';
 
-export const AfricaCountries: NationData[] = [
+export const AfricaNations: ReadonlyArray<NationData> = [
   {
     name: 'ALGERIA',
     iconCode: 'dz',
@@ -221,4 +221,4 @@ export const AfricaCountries: NationData[] = [
     name: 'ZIMBABWE',
     iconCode: 'zw',
   },
-];
+] as const;
