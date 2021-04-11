@@ -18,27 +18,27 @@ export interface NationData {
         <div class="nation-item">
           <!-- <p class="nation-name">Colombia</p> -->
           <p class="nation-code">co</p>
-          <ngx-nations-icon [icon]="'co'" fontSize="50px"></ngx-nations-icon>
+          <ngx-nations-icon [icon]="'co'" fontSize="100px"></ngx-nations-icon>
         </div>
         <div class="nation-item">
           <!-- <p class="nation-name">Tanzania</p> -->
           <p class="nation-code">tz</p>
-          <ngx-nations-icon [icon]="'tz'" fontSize="50px"></ngx-nations-icon>
+          <ngx-nations-icon [icon]="'tz'" fontSize="100px"></ngx-nations-icon>
         </div>
         <div class="nation-item">
           <!-- <p class="nation-name">Ukraine</p> -->
           <p class="nation-code">ua</p>
-          <ngx-nations-icon [icon]="'ua'" fontSize="50px"></ngx-nations-icon>
+          <ngx-nations-icon [icon]="'ua'" fontSize="100px"></ngx-nations-icon>
         </div>
         <div class="nation-item">
           <!-- <p class="nation-name">Tajikistan</p> -->
           <p class="nation-code">tj</p>
-          <ngx-nations-icon [icon]="'tj'" fontSize="50px"></ngx-nations-icon>
+          <ngx-nations-icon [icon]="'tj'" fontSize="100px"></ngx-nations-icon>
         </div>
         <div class="nation-item">
           <!-- <p class="nation-name">Tonga</p> -->
           <p class="nation-code">to</p>
-          <ngx-nations-icon [icon]="'to'" fontSize="50px"></ngx-nations-icon>
+          <ngx-nations-icon [icon]="'to'" fontSize="100px"></ngx-nations-icon>
         </div>
       </div>
     </div>
@@ -46,17 +46,13 @@ export interface NationData {
     <div class="py-2">
       <h3 class="section-subtitle">All {{ title }} nation Flags</h3>
       <div class="nation-grid">
-        <div class="col-span-1 mb-3" *ngFor="let nation of nations">
-          <div class="nation-item">
-            <!-- <p class="nation-name">{{ nation.name }}</p> -->
-            <p class="nation-code">{{ nation.iconCode }}</p>
-            <div class="nation-item">
-              <ngx-nations-icon
-                [icon]="nation.iconCode"
-                fontSize="50px"
-              ></ngx-nations-icon>
-            </div>
-          </div>
+        <div class="nation-item" *ngFor="let nation of nations">
+          <!-- <p class="nation-name">{{ nation.name }}</p> -->
+          <p class="nation-code">{{ nation.iconCode }}</p>
+          <ngx-nations-icon
+            [icon]="nation.iconCode"
+            fontSize="100px"
+          ></ngx-nations-icon>
         </div>
       </div>
     </div>

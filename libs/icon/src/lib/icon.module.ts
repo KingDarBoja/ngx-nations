@@ -12,16 +12,18 @@ import { NgxNationsIconConfig, NGX_NATIONS_ICON_CONFIG } from './types';
 })
 export class NgxNationsIconModule {
   static forRoot(
-    config: NgxNationsIconConfig = {
-      showName: true,
-    },
+    config: NgxNationsIconConfig = {},
   ): ModuleWithProviders<NgxNationsIconModule> {
     return {
       ngModule: NgxNationsIconModule,
       providers: [
         {
           provide: NGX_NATIONS_ICON_CONFIG,
-          useValue: config,
+          useValue: {
+            showName: config?.showName ?? true,
+            direction: config?.direction ?? 'column',
+            position: config?.position ?? 'end',
+          } as NgxNationsIconConfig,
         },
       ],
     };

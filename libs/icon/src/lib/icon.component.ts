@@ -10,20 +10,26 @@ import { NGX_NATIONS_ICON_CONFIG, NgxNationsIconConfig } from './types';
 @Component({
   selector: 'ngx-nations-icon',
   template: `
-    <div class="">
-      <svg-icon [key]="icon" [size]="size" [fontSize]="fontSize"></svg-icon>
+    <div
+      class="nation-icon-container"
+      [ngStyle]="{
+        'flex-direction': direction
+      }"
+    >
+      <svg-icon [key]="icon" [size]="size" [fontSize]="fontSize" class="nation-icon-svg"></svg-icon>
       <ng-container *ngIf="showName">
-        <div>{{ icon | nationName }}</div>
+        <div
+          class="nation-icon-name"
+          [ngStyle]="{
+            order: position === 'start' ? -1 : 1
+          }"
+        >
+          {{ icon | nationName }}
+        </div>
       </ng-container>
     </div>
   `,
-  styles: [
-    `
-      :host {
-        display: block;
-      }
-    `,
-  ],
+  styleUrls: ['./icon.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NgxNationsIconComponent {
@@ -35,11 +41,15 @@ export class NgxNationsIconComponent {
    * selected locale.
    */
   @Input() showName: boolean;
+  @Input() direction: NgxNationsIconConfig['direction'];
+  @Input() position: NgxNationsIconConfig['position'];
 
   constructor(
     @Inject(NGX_NATIONS_ICON_CONFIG)
     private readonly config: NgxNationsIconConfig,
   ) {
     this.showName = this.config.showName;
+    this.direction = this.config.direction;
+    this.position = this.config.position;
   }
 }

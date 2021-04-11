@@ -6,7 +6,7 @@
 
 <ng-template #header>
   <header class="bg-blue-900 py-6">
-    <div class="container mx-auto text-center">
+    <div class="container mx-auto px-4 text-center">
       <img
         alt="Nx logo"
         width="75"
@@ -22,59 +22,61 @@
   <div
     class="flex flex-col flex-grow bg-blue-800 text-white space-y-6 divide-y py-6"
   >
-    <div class="container mx-auto">
+    <div class="container mx-auto px-4">
       <h1 class="mb-2 font-semibold text-white text-lg">Lazy Loaded Modules</h1>
       <div class="flex items-center justify-between">
-        <div class="space-x-4">
-          <button
-            class="bg-transparent font-semibold text-white py-2 px-4 border border-white hover:border-transparent rounded"
-            [routerLink]="'./'"
-            [routerLinkActive]="'bg-blue-500'"
-            [routerLinkActiveOptions]="{ exact: true }"
-          >
-            HOME
-          </button>
-          <button
-            *ngFor="let continent of continents"
-            class="bg-transparent font-semibold text-white py-2 px-4 border border-white hover:border-transparent rounded"
-            [routerLink]="continent"
-            [routerLinkActive]="'bg-blue-500'"
-          >
-            {{ continent | uppercase }}
-          </button>
+        <div class="flex flex-grow">
+          <div class="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-4">
+            <button
+              class="col-span-2 bg-transparent font-semibold text-white py-2 px-4 border border-white hover:border-transparent rounded"
+              [routerLink]="'./'"
+              [routerLinkActive]="'bg-blue-500'"
+              [routerLinkActiveOptions]="{ exact: true }"
+            >
+              HOME
+            </button>
+            <button
+              *ngFor="let continent of continents"
+              class="col-span-2 bg-transparent font-semibold text-white py-2 px-4 border border-white hover:border-transparent rounded"
+              [routerLink]="continent"
+              [routerLinkActive]="'bg-blue-500'"
+            >
+              {{ continent | uppercase }}
+            </button>
+          </div>
         </div>
         <ng-container *ngTemplateOutlet="changeLanguage"></ng-container>
       </div>
     </div>
 
-    <div class="container mx-auto py-2">
+    <div class="container mx-auto py-2 px-4">
       <h3 class="section-subtitle">Lazy Loaded Flags at App Module</h3>
 
       <div class="nation-grid">
         <div class="nation-item">
           <!-- <p class="nation-name">Colombia</p> -->
           <p class="nation-code">co</p>
-          <ngx-nations-icon [icon]="'co'" fontSize="50px"></ngx-nations-icon>
+          <ngx-nations-icon [icon]="'co'" fontSize="100px"></ngx-nations-icon>
         </div>
         <div class="nation-item">
           <!-- <p class="nation-name">Tanzania</p> -->
           <p class="nation-code">tz</p>
-          <ngx-nations-icon [icon]="'tz'" fontSize="50px"></ngx-nations-icon>
+          <ngx-nations-icon [icon]="'tz'" fontSize="100px"></ngx-nations-icon>
         </div>
         <div class="nation-item">
           <!-- <p class="nation-name">Ukraine</p> -->
           <p class="nation-code">ua</p>
-          <ngx-nations-icon [icon]="'ua'" fontSize="50px"></ngx-nations-icon>
+          <ngx-nations-icon [icon]="'ua'" fontSize="100px"></ngx-nations-icon>
         </div>
         <div class="nation-item">
           <!-- <p class="nation-name">Tajikistan</p> -->
           <p class="nation-code">tj</p>
-          <ngx-nations-icon [icon]="'tj'" fontSize="50px"></ngx-nations-icon>
+          <ngx-nations-icon [icon]="'tj'" fontSize="100px"></ngx-nations-icon>
         </div>
         <div class="nation-item">
           <!-- <p class="nation-name">Tonga</p> -->
           <p class="nation-code">to</p>
-          <ngx-nations-icon [icon]="'to'" fontSize="50px"></ngx-nations-icon>
+          <ngx-nations-icon [icon]="'to'" fontSize="100px"></ngx-nations-icon>
         </div>
       </div>
     </div>

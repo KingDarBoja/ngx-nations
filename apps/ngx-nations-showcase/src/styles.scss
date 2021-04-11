@@ -13,7 +13,7 @@
   }
 
   .nation-grid {
-    @apply grid grid-cols-4 gap-2;
+    @apply grid grid-cols-2 gap-2;
   }
 
   .nation-item {
@@ -28,15 +28,21 @@
     @apply text-sm;
   }
 
+  @screen sm {
+    .nation-grid {
+      @apply grid-cols-4;
+    }
+  }
+
   @screen md {
     .nation-grid {
-      @apply grid-cols-8;
+      @apply grid-cols-6;
     }
   }
 
   @screen lg {
     .nation-grid {
-      @apply grid-cols-10;
+      @apply grid-cols-8;
     }
   }
 }
