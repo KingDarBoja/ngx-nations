@@ -26,7 +26,7 @@ import { AppRoutingModule } from './app.routing';
     NgxNationsCoreModule.forRoot({
       locales: [LocaleEN, LocaleES, LocaleFR, LocalePT],
     }),
-    NgxNationsIconModule,
+    NgxNationsIconModule.forRoot(),
   ],
   bootstrap: [AppComponent],
 })
