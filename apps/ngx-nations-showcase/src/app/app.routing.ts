@@ -27,6 +27,10 @@ const routes: Routes = [
     loadChildren: () =>
       import('./features/oceania/oceania.module').then((m) => m.OceaniaModule),
   },
+  {
+    path: '**',
+    redirectTo: '',
+  }
 ];
 
 @NgModule({
