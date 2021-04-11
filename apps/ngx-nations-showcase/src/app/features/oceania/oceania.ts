@@ -17,10 +17,10 @@ export const OceaniaNations: ReadonlyArray<NationData> = [
     name: 'Fiji',
     iconCode: 'fj',
   },
-  // {
-  //   name: 'French Polynesia',
-  //   iconCode: 'oc',
-  // },
+  {
+    name: 'French Polynesia',
+    iconCode: 'pf',
+  },
   {
     name: 'Guam',
     iconCode: 'gu',
@@ -89,8 +89,4 @@ export const OceaniaNations: ReadonlyArray<NationData> = [
     name: 'Vanuatu',
     iconCode: 'vu',
   },
-  // {
-  //   name: '',
-  //   iconCode: '',
-  // },
 ] as const;
