@@ -2,7 +2,7 @@ import { Inject, Injectable } from '@angular/core';
 import {
   NgxNationsCoreConfig,
   NgxNationsLocaleData,
-  NGX_NATIONS_CONFIG,
+  NGX_NATIONS_CORE_CONFIG,
 } from './types';
 import { Subject } from 'rxjs';
 import { langs } from 'i18n-iso-countries';
@@ -27,13 +27,13 @@ export interface NgxNationsConfiguration {
 
 @Injectable({ providedIn: 'root' })
 export class NgxNationsCoreService {
-  locale$: Subject<never> = new Subject();
+  readonly locale$: Subject<never> = new Subject();
   private _locale: NgxNationsLocaleData['locale'];
 
   constructor(
-    @Inject(NGX_NATIONS_CONFIG) readonly config: NgxNationsCoreConfig,
+    @Inject(NGX_NATIONS_CORE_CONFIG) private readonly config: NgxNationsCoreConfig,
   ) {
-    this.setLocale(config.defaultLocale.locale);
+    this.setLocale(this.config.defaultLocale.locale);
   }
 
   locale(): NgxNationsLocaleData['locale'] {

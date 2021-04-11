@@ -3,7 +3,7 @@ import { NgxNationsCoreService } from './core.service';
 import {
   NgxNationsCoreConfig,
   NgxNationsLocaleData,
-  NGX_NATIONS_CONFIG,
+  NGX_NATIONS_CORE_CONFIG,
 } from './types';
 import { registerLocale } from 'i18n-iso-countries';
 import { LocaleEN } from 'i18n-iso-countries/langs';
@@ -38,13 +38,13 @@ export class NgxNationsCoreModule {
       ngModule: NgxNationsCoreModule,
       providers: [
         {
-          provide: NGX_NATIONS_CONFIG,
+          provide: NGX_NATIONS_CORE_CONFIG,
           useValue: config,
         },
         {
           provide: NgxNationsCoreService,
           useFactory: NgxNationsLocalesFactory,
-          deps: [NGX_NATIONS_CONFIG],
+          deps: [NGX_NATIONS_CORE_CONFIG],
         },
       ],
     };

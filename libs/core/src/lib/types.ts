@@ -84,6 +84,6 @@ export interface NgxNationsCoreConfig {
   defaultLocale?: NgxNationsLocaleData;
 }
 
-export const NGX_NATIONS_CONFIG = new InjectionToken<NgxNationsCoreConfig>(
-  'NGX_NATIONS_CONFIG',
+export const NGX_NATIONS_CORE_CONFIG = new InjectionToken<NgxNationsCoreConfig>(
+  'NGX_NATIONS_CORE_CONFIG',
 );
