@@ -203,7 +203,7 @@ export const EuropeNations: ReadonlyArray<NationData> = [
   },
   {
     name: 'Slovenia',
-    iconCode: 'sl',
+    iconCode: 'si',
   },
   {
     name: 'Svalbard & Jan Mayen Islands',
