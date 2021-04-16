@@ -5,7 +5,7 @@
 </div>
 
 <ng-template #header>
-  <header class="bg-blue-900 py-6">
+  <header class="bg-purple-900 py-6">
     <div class="container mx-auto px-4 text-center">
       <img
         alt="Nx logo"
@@ -19,16 +19,14 @@
 </ng-template>
 
 <ng-template #body>
-  <div
-    class="flex flex-col flex-grow bg-blue-800 text-white space-y-6 divide-y py-6"
-  >
+  <div class="app-body">
     <div class="container mx-auto px-4">
-      <h1 class="mb-2 font-semibold text-white text-lg">Lazy Loaded Modules</h1>
+      <h1 class="mb-2 font-semibold text-lg">Lazy Loaded Modules</h1>
       <div class="flex items-center justify-between">
         <div class="flex flex-grow">
           <div class="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-4">
             <button
-              class="col-span-2 bg-transparent font-semibold text-white py-2 px-4 border border-white hover:border-transparent rounded"
+              class="col-span-2 bg-transparent font-semibold py-2 px-4 border border-white hover:border-transparent rounded"
               [routerLink]="'./'"
               [routerLinkActive]="'bg-blue-500'"
               [routerLinkActiveOptions]="{ exact: true }"
@@ -37,7 +35,7 @@
             </button>
             <button
               *ngFor="let continent of continents"
-              class="col-span-2 bg-transparent font-semibold text-white py-2 px-4 border border-white hover:border-transparent rounded"
+              class="col-span-2 bg-transparent font-semibold py-2 px-4 border border-white hover:border-transparent rounded"
               [routerLink]="continent"
               [routerLinkActive]="'bg-blue-500'"
             >
@@ -88,7 +86,7 @@
 </ng-template>
 
 <ng-template #footer>
-  <div class="bg-blue-900"></div>
+  <div class="app-footer">Made with &hearts; by KingDarBoja</div>
 </ng-template>
 
 <ng-template #changeLanguage>
@@ -96,7 +94,7 @@
     <div>
       <button
         type="button"
-        class="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500"
+        class="dropdown-menu"
         id="options-menu"
         aria-expanded="true"
         aria-haspopup="true"
@@ -121,7 +119,7 @@
     </div>
 
     <div
-      class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+      class="dropdown-option-group"
       [ngClass]="{ hidden: !menuVisible }"
       role="menu"
       aria-orientation="vertical"
@@ -130,7 +128,7 @@
       <div class="py-1" role="none">
         <a
           *ngFor="let locale of locales"
-          class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+          class="dropdown-option"
           role="menuitem"
           (click)="changeLocale(locale)"
           >{{ locale | uppercase }}</a

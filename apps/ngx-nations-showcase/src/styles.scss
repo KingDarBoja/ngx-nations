@@ -1,9 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 @layer components {
+  .app-body {
+    @apply flex flex-col flex-grow bg-purple-800 font-bold text-white space-y-6 divide-y py-6;
+  }
+
+  .app-footer {
+    @apply flex justify-center bg-purple-900 text-white text-lg font-bold py-2;
+  }
+
+  .dropdown-menu {
+    @apply inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-bold text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-purple-500;
+  }
+
+  .dropdown-option {
+    @apply block px-4 py-2 text-sm text-gray-700 hover:bg-purple-100 hover:text-purple-900;
+
+    &-group {
+      @apply origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none;
+    }
+  }
+
   .section-title {
     @apply mb-2 font-semibold text-lg;
   }
@@ -47,7 +67,8 @@
   }
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
