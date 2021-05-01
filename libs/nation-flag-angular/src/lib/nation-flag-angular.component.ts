@@ -56,7 +56,6 @@ export class NationFlagAngularComponent {
 
   @Input() set nation(code: Nation) {
     const nation = this.registry.get(code);
-    console.log(nation);
     if (nation) {
       this._code = code;
       this._nationSVG = nation;

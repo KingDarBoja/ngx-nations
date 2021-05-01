@@ -4,39 +4,16 @@
     "srcFiles": [
       "./icons/twemoji/**/*.svg"
     ],
-    "outputDirectory": "./dist/libs/icon/tw-icons",
-    "additionalModelOutputPath": "./dist/libs/icon/tw-icons/types",
-    "interfaceName": "Flag",
-    "typeName": "flag",
-    "prefix": "flag",
+    "outputDirectory": "./libs/nation-tw-flags/src",
+    "additionalModelOutputPath": "./libs/nation-tw-flags/src/lib/types",
+    "interfaceName": "NationFlag",
+    "typeName": "nationFlag",
+    "prefix": "nationFlag",
     "iconsFolderName": "lib",
     "exportCompleteIconSet": true,
     "optimizeForLazyLoading": true,
     "modelFileName": "icon.model",
-    "compileSources": true,
-    "svgoConfig": {
-      "plugins": [
-        {
-          "cleanupAttrs": true
-        }
-      ]
-    }
-  },
-  {
-    "conversionType": "files",
-    "srcFiles": [
-      "./icons/lipis/**/*.svg"
-    ],
-    "outputDirectory": "./dist/libs/icon/lp-icons",
-    "additionalModelOutputPath": "./dist/libs/icon/lp-icons/types",
-    "interfaceName": "Flag",
-    "typeName": "flag",
-    "prefix": "flag",
-    "iconsFolderName": "lib",
-    "exportCompleteIconSet": true,
-    "optimizeForLazyLoading": true,
-    "modelFileName": "icon.model",
-    "compileSources": true,
+    "compileSources": false,
     "svgoConfig": {
       "plugins": [
         {

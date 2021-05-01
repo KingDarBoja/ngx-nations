@@ -22,7 +22,8 @@
       "@ngx-nations/nation-flag-angular": [
         "libs/nation-flag-angular/src/index.ts"
       ],
-      "@nation/i18n": ["libs/nation-i18n/src/index.ts"]
+      "@nation/i18n": ["libs/nation-i18n/src/index.ts"],
+      "@nation/tw-flags": ["libs/nation-tw-flags/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

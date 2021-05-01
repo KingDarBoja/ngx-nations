@@ -291,6 +291,38 @@
           }
         }
       }
+    },
+    "nation-tw-flags": {
+      "root": "libs/nation-tw-flags",
+      "sourceRoot": "libs/nation-tw-flags/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/nation-tw-flags/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/nation-tw-flags"],
+          "options": {
+            "jestConfig": "libs/nation-tw-flags/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "builder": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/nation-tw-flags",
+            "tsConfig": "libs/nation-tw-flags/tsconfig.lib.json",
+            "packageJson": "libs/nation-tw-flags/package.json",
+            "main": "libs/nation-tw-flags/src/index.ts",
+            "assets": ["libs/nation-tw-flags/*.md"]
+          }
+        }
+      }
     }
   }
 }

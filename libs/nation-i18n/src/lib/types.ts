@@ -17,7 +17,7 @@ export type LocalizedCountryNames<
 > = LocalizedCountry<T>;
 
 /** The key represents the alpha2Code of the country. */
-type LocaleDataCountry = Record<string, string | string[]>;
+type LocaleDataCountry = Record<Alpha2Code, string | string[]>;
 
 export type LocaleData = {
   locale: string;

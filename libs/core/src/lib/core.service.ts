@@ -1,6 +1,6 @@
 import { Inject, Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
-import { langs } from 'i18n-iso-countries';
+import { langs } from '@nation/i18n';
 import {
   NGX_NATIONS_CORE_CONFIG,
   NgxNationsCoreConfig,

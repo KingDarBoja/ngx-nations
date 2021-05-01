@@ -5,5 +5,6 @@ module.exports = {
     '<rootDir>/libs/nation-flag',
     '<rootDir>/libs/nation-flag-angular',
     '<rootDir>/libs/nation-i18n',
+    '<rootDir>/libs/nation-tw-flags',
   ],
 };

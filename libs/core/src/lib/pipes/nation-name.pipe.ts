@@ -5,7 +5,7 @@ import {
   Pipe,
   PipeTransform,
 } from '@angular/core';
-import { getName } from 'i18n-iso-countries';
+import { getName } from '@nation/i18n';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { NgxNationsCoreService } from '../core.service';

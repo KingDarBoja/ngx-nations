@@ -10,7 +10,6 @@ export class NationFlagAngularRegistry {
   private readonly flagRegistryMap = new Map<string, string>();
 
   constructor(@Inject(NGX_NATION_FlAG_CONFIG) config: NgxNationFlagConfig) {
-    console.log(config);
     if (config.icons) {
       this.register(config.icons);
     }
