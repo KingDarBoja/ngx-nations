@@ -1,12 +1,13 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
-import { NgxNationsCoreService } from './core.service';
-import {
-  NgxNationsCoreConfig,
-  NgxNationsLocaleData,
-  NGX_NATIONS_CORE_CONFIG,
-} from './types';
 import { registerLocale } from 'i18n-iso-countries';
 import { LocaleEN } from 'i18n-iso-countries/langs';
+
+import { NgxNationsCoreService } from './core.service';
+import {
+  NgxNationLocaleEntry,
+  NgxNationsCoreConfig,
+  NGX_NATIONS_CORE_CONFIG,
+} from './core-di-tokens';
 import { NationNamePipeModule } from './pipes/nation-name.pipe';
 
 const PIPES = [NationNamePipeModule];
@@ -18,7 +19,7 @@ export function NgxNationsLocalesFactory(
     locales: config.locales || [],
     defaultLocale: config.defaultLocale || LocaleEN,
   };
-  const locales = new Set<NgxNationsLocaleData>(
+  const locales = new Set<NgxNationLocaleEntry>(
     [].concat(defaultConfig.locales, [defaultConfig.defaultLocale]),
   );
 

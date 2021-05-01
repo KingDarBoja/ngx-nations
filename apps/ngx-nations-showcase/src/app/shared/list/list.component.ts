@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
-import { NgxNationIcon } from '@ngx-nations/icon';
+import { Nation } from '@ngx-nations/core';
 
 export interface NationData {
   name: string;
-  iconCode: NgxNationIcon;
+  iconCode: Nation;
 }
 
 @Component({

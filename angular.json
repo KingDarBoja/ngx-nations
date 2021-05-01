@@ -165,60 +165,6 @@
         }
       }
     },
-    "icon": {
-      "projectType": "library",
-      "root": "libs/icon",
-      "sourceRoot": "libs/icon/src",
-      "prefix": "ngx-nations",
-      "architect": {
-        "build": {
-          "builder": "@nrwl/angular:package",
-          "options": {
-            "tsConfig": "libs/icon/tsconfig.lib.json",
-            "project": "libs/icon/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "libs/icon/tsconfig.lib.prod.json"
-            }
-          }
-        },
-        "build-with-deps": {
-          "builder": "@nrwl/workspace:run-commands",
-          "options": {
-            "parallel": false,
-            "commands": [
-              {
-                "command": "nx run core:build-with-deps"
-              },
-              {
-                "command": "nx run icon:build:production"
-              },
-              {
-                "command": "yarn run svg-to-ts"
-              }
-            ]
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/icon/src/**/*.ts",
-              "libs/icon/src/**/*.html"
-            ]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/icon"],
-          "options": {
-            "jestConfig": "libs/icon/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
     "core": {
       "projectType": "library",
       "root": "libs/core",
