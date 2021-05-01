@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { SvgIconsModule } from '@ngneat/svg-icon';
 import { NgxNationsCoreModule } from '@ngx-nations/core';
 
 import { NationFlagAngularModule } from '@ngx-nations/nation-flag-angular';
@@ -20,13 +19,12 @@ import { AppRoutingModule } from './app.routing';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SvgIconsModule.forRoot({
-      icons: [flagUa],
-    }),
     NgxNationsCoreModule.forRoot({
       locales: [LocaleEN, LocaleES, LocaleFR, LocalePT],
     }),
-    NationFlagAngularModule.forRoot(),
+    NationFlagAngularModule.forRoot({
+      icons: [flagUa],
+    }),
   ],
   bootstrap: [AppComponent],
 })

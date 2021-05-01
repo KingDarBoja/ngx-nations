@@ -42,7 +42,7 @@ export class NationFlagElement extends HTMLElement {
         const placeholder = document.createElement('div');
         placeholder.innerHTML = newValue;
         const svgElement = placeholder.firstChild;
-        const cloneSvgElement = svgElement.cloneNode(true);
+        const cloneSvgElement = svgElement.cloneNode(true) as SVGElement;
         const newDefsElement = document.createElementNS(
           'http://www.w3.org/2000/svg',
           'defs',
@@ -137,6 +137,13 @@ export class NationFlagElement extends HTMLElement {
           default:
             break;
         }
+        // Set some extra attributes
+        cloneSvgElement.setAttribute('fit', '');
+        cloneSvgElement.setAttribute('height', '100%');
+        cloneSvgElement.setAttribute('width', '100%');
+        cloneSvgElement.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+        cloneSvgElement.setAttribute('focusable', 'false');
+        // Append the cloned svg element
         this.div.appendChild(cloneSvgElement);
       }
     }

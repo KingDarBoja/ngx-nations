@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { SvgIconsModule } from '@ngneat/svg-icon';
+import { NationFlagAngularModule } from '@ngx-nations/nation-flag-angular';
 import {
   flagAs,
   flagAu,
@@ -37,7 +37,7 @@ import { NationListModule } from '../../shared/list/list.module';
     CommonModule,
     OceaniaRoutingModule,
     NationListModule,
-    SvgIconsModule.forChild([
+    NationFlagAngularModule.forChild([
       flagAs,
       flagAu,
       flagCk,

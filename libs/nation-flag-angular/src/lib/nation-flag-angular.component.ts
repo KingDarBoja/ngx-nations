@@ -5,7 +5,6 @@ import {
   Inject,
   Input,
 } from '@angular/core';
-import { SvgIconRegistry } from '@ngneat/svg-icon';
 import { Nation } from '@ngx-nations/core';
 import '@ngx-nations/nation-flag';
 import type { NationFlagVariant } from '@ngx-nations/nation-flag';
@@ -13,6 +12,7 @@ import {
   NgxNationFlagConfig,
   NGX_NATION_FlAG_CONFIG,
 } from './nation-di-tokens';
+import { NationFlagAngularRegistry } from './nation-flag-angular.service';
 
 @Component({
   selector: 'nation-flag-angular',
@@ -55,7 +55,8 @@ export class NationFlagAngularComponent {
   }
 
   @Input() set nation(code: Nation) {
-    const nation = this.svgIconRegistry.get(code);
+    const nation = this.registry.get(code);
+    console.log(nation);
     if (nation) {
       this._code = code;
       this._nationSVG = nation;
@@ -83,11 +84,11 @@ export class NationFlagAngularComponent {
   constructor(
     @Inject(NGX_NATION_FlAG_CONFIG)
     private readonly config: NgxNationFlagConfig,
-    private readonly svgIconRegistry: SvgIconRegistry,
+    private readonly registry: NationFlagAngularRegistry,
   ) {
-    this.showName = this.config.showName;
-    this.direction = this.config.direction;
-    this.position = this.config.position;
+    this.showName = this.config.showName ?? true;
+    this.direction = this.config.direction ?? 'column';
+    this.position = this.config.position ?? 'end';
   }
 
   private coerceCssPixelValue(value: string | number): string {
