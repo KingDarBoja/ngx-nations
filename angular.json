@@ -183,20 +183,6 @@
             }
           }
         },
-        "build-with-deps": {
-          "builder": "@nrwl/workspace:run-commands",
-          "options": {
-            "parallel": false,
-            "commands": [
-              {
-                "command": "cd node_modules/i18n-iso-countries && yarn build"
-              },
-              {
-                "command": "nx run core:build:production"
-              }
-            ]
-          }
-        },
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
@@ -270,6 +256,38 @@
           "options": {
             "jestConfig": "libs/nation-flag-angular/jest.config.js",
             "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "nation-i18n": {
+      "root": "libs/nation-i18n",
+      "sourceRoot": "libs/nation-i18n/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/nation-i18n/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/nation-i18n"],
+          "options": {
+            "jestConfig": "libs/nation-i18n/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "builder": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/nation-i18n",
+            "tsConfig": "libs/nation-i18n/tsconfig.lib.json",
+            "packageJson": "libs/nation-i18n/package.json",
+            "main": "libs/nation-i18n/src/index.ts",
+            "assets": ["libs/nation-i18n/*.md"]
           }
         }
       }

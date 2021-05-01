@@ -4,12 +4,7 @@ import { NgxNationsCoreModule } from '@ngx-nations/core';
 
 import { NationFlagAngularModule } from '@ngx-nations/nation-flag-angular';
 import { flagUa } from '@ngx-nations/icon/tw-icons';
-import {
-  LocaleEN,
-  LocaleES,
-  LocaleFR,
-  LocalePT,
-} from 'i18n-iso-countries/langs';
+import { LocaleEN, LocaleES, LocaleFR, LocalePT } from '@nation/i18n';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing';

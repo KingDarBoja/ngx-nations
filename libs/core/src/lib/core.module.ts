@@ -1,6 +1,5 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
-import { registerLocale } from 'i18n-iso-countries';
-import { LocaleEN } from 'i18n-iso-countries/langs';
+import { registerLocale, LocaleEN } from '@nation/i18n';
 
 import { NgxNationsCoreService } from './core.service';
 import {

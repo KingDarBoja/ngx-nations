@@ -23,6 +23,7 @@
     },
     "core": { "tags": ["scope:public", "type:core"] },
     "nation-flag": { "tags": ["scope:public", "type:ui"] },
-    "nation-flag-angular": { "tags": ["scope:public", "type:ui"] }
+    "nation-flag-angular": { "tags": ["scope:public", "type:ui"] },
+    "nation-i18n": { "tags": ["scope:public", "type:core"] }
   }
 }
