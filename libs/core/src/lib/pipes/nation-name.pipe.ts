@@ -9,7 +9,7 @@ import { getName } from 'i18n-iso-countries';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { NgxNationsCoreService } from '../core.service';
-import { NgxNationLocale } from '../types';
+import { NationLocale } from '../types';
 
 @Pipe({
   name: 'nationName',
@@ -29,7 +29,7 @@ export class NationNamePipe implements PipeTransform, OnDestroy {
 
   transform(
     value: string,
-    locale?: NgxNationLocale,
+    locale?: NationLocale,
     alternative?: number,
   ): string {
     const names = getName(value, locale ?? this.config.locale());

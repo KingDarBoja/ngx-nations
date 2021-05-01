@@ -2,7 +2,7 @@
   display: block;
 }
 
-.nation-icon-container {
+.ni-container {
   display: flex;
   align-items: center;
 
@@ -10,11 +10,7 @@
     display: flex;
   }
 
-  .nation-icon-svg {
-    fill: inherit;
-  }
-
-  .nation-icon-name {
+  .ni-name {
     padding: 4px;
   }
 }

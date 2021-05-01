@@ -1,5 +1,5 @@
 {
-  "extends": "../../.eslintrc.json",
+  "extends": ["../../.eslintrc.json"],
   "ignorePatterns": ["!**/*"],
   "overrides": [
     {
@@ -9,24 +9,16 @@
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
       "parserOptions": {
-        "project": ["libs/icon/tsconfig.*?.json"]
+        "project": ["libs/nation-flag-angular/tsconfig.*?.json"]
       },
       "rules": {
         "@angular-eslint/directive-selector": [
           "error",
-          {
-            "type": "attribute",
-            "prefix": "ngx-nations",
-            "style": "camelCase"
-          }
+          { "type": "attribute", "prefix": "nation-flag-angular", "style": "camelCase" }
         ],
         "@angular-eslint/component-selector": [
           "error",
-          {
-            "type": "element",
-            "prefix": "ngx-nations",
-            "style": "kebab-case"
-          }
+          { "type": "element", "prefix": "nation-flag-angular", "style": "kebab-case" }
         ]
       }
     },

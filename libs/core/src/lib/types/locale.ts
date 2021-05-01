@@ -1,7 +1,4 @@
-import { InjectionToken } from '@angular/core';
-import { LocaleData } from 'i18n-iso-countries/dist/types';
-
-export declare type NgxNationLocale =
+export declare type NationLocale =
   | 'af'
   | 'am'
   | 'ar'
@@ -73,17 +70,3 @@ export declare type NgxNationLocale =
   | 'uz'
   | 'vi'
   | 'zh';
-
-export declare type NgxNationsLocaleData = {
-  locale: NgxNationLocale | string;
-  countries: LocaleData['countries'];
-};
-
-export interface NgxNationsCoreConfig {
-  locales?: NgxNationsLocaleData[];
-  defaultLocale?: NgxNationsLocaleData;
-}
-
-export const NGX_NATIONS_CORE_CONFIG = new InjectionToken<NgxNationsCoreConfig>(
-  'NGX_NATIONS_CORE_CONFIG',
-);

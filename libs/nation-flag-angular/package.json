@@ -1,12 +1,11 @@
 {
-  "name": "@ngx-nations/icon",
-  "version": "0.1.4",
+  "name": "@ngx-nations/nation-flag-angular",
+  "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^11.2.7",
     "@angular/core": "^11.2.7"
   },
   "dependencies": {
-    "@ngneat/svg-icon": "^3.1.1",
     "tslib": "^2.0.0"
   }
 }

@@ -16,9 +16,12 @@
     "baseUrl": ".",
     "paths": {
       "@ngx-nations/core": ["libs/core/src/index.ts"],
-      "@ngx-nations/icon": ["libs/icon/src/index.ts"],
       "@ngx-nations/icon/tw-icons": ["dist/libs/icon/tw-icons/index.js"],
-      "@ngx-nations/icon/lp-icons": ["dist/libs/icon/lp-icons/index.js"]
+      "@ngx-nations/icon/lp-icons": ["dist/libs/icon/lp-icons/index.js"],
+      "@ngx-nations/nation-flag": ["libs/nation-flag/src/index.ts"],
+      "@ngx-nations/nation-flag-angular": [
+        "libs/nation-flag-angular/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -37,15 +37,7 @@
   }
 
   .nation-item {
-    @apply flex flex-col items-center text-center;
-  }
-
-  .nation-name {
-    @apply text-sm font-normal;
-  }
-
-  .nation-code {
-    @apply text-sm;
+    @apply flex flex-col items-center text-center text-xs;
   }
 
   @screen sm {

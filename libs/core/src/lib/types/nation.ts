@@ -1,4 +1,4 @@
-export declare type NgxNationIcon =
+export declare type Nation =
   | 'ac'
   | 'ad'
   | 'ae'
@@ -257,8 +257,3 @@ export declare type NgxNationIcon =
   | 'za'
   | 'zm'
   | 'zw';
-
-export interface NgxNationIconData {
-  name: NgxNationIcon;
-  data: string;
-}
