@@ -22,6 +22,8 @@
       "implicitDependencies": ["ngx-nations-showcase"]
     },
     "icon": { "tags": ["scope:public", "type:ui"] },
-    "core": { "tags": ["scope:public", "type:core"] }
+    "core": { "tags": ["scope:public", "type:core"] },
+    "nation-flag": { "tags": ["scope:public", "type:ui"] },
+    "nation-flag-angular": { "tags": ["scope:public", "type:ui"] }
   }
 }

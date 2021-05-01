@@ -18,27 +18,27 @@ export interface NationData {
         <div class="nation-item">
           <!-- <p class="nation-name">Colombia</p> -->
           <p class="nation-code">co</p>
-          <ngx-nations-icon [icon]="'co'" fontSize="100px"></ngx-nations-icon>
+          <nation-flag-angular [nation]="'co'" fontSize="100px"></nation-flag-angular>
         </div>
         <div class="nation-item">
           <!-- <p class="nation-name">Tanzania</p> -->
           <p class="nation-code">tz</p>
-          <ngx-nations-icon [icon]="'tz'" fontSize="100px"></ngx-nations-icon>
+          <nation-flag-angular [nation]="'tz'" fontSize="100px"></nation-flag-angular>
         </div>
         <div class="nation-item">
           <!-- <p class="nation-name">Ukraine</p> -->
           <p class="nation-code">ua</p>
-          <ngx-nations-icon [icon]="'ua'" fontSize="100px"></ngx-nations-icon>
+          <nation-flag-angular [nation]="'ua'" fontSize="100px"></nation-flag-angular>
         </div>
         <div class="nation-item">
           <!-- <p class="nation-name">Tajikistan</p> -->
           <p class="nation-code">tj</p>
-          <ngx-nations-icon [icon]="'tj'" fontSize="100px"></ngx-nations-icon>
+          <nation-flag-angular [nation]="'tj'" fontSize="100px"></nation-flag-angular>
         </div>
         <div class="nation-item">
           <!-- <p class="nation-name">Tonga</p> -->
           <p class="nation-code">to</p>
-          <ngx-nations-icon [icon]="'to'" fontSize="100px"></ngx-nations-icon>
+          <nation-flag-angular [nation]="'to'" fontSize="100px"></nation-flag-angular>
         </div>
       </div>
     </div>
@@ -49,10 +49,10 @@ export interface NationData {
         <div class="nation-item" *ngFor="let nation of nations">
           <!-- <p class="nation-name">{{ nation.name }}</p> -->
           <p class="nation-code">{{ nation.iconCode }}</p>
-          <ngx-nations-icon
-            [icon]="nation.iconCode"
+          <nation-flag-angular
+            [nation]="nation.iconCode"
             fontSize="100px"
-          ></ngx-nations-icon>
+          ></nation-flag-angular>
         </div>
       </div>
     </div>

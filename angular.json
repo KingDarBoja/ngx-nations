@@ -25,7 +25,8 @@
     "@nrwl/angular:library": {
       "style": "scss",
       "linter": "eslint",
-      "unitTestRunner": "jest"
+      "unitTestRunner": "jest",
+      "strict": true
     },
     "@nrwl/angular:component": {
       "style": "scss"
@@ -264,6 +265,64 @@
           "outputs": ["coverage/libs/core"],
           "options": {
             "jestConfig": "libs/core/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "nation-flag": {
+      "root": "libs/nation-flag",
+      "sourceRoot": "libs/nation-flag/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/nation-flag/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/nation-flag"],
+          "options": {
+            "jestConfig": "libs/nation-flag/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "nation-flag-angular": {
+      "projectType": "library",
+      "root": "libs/nation-flag-angular",
+      "sourceRoot": "libs/nation-flag-angular/src",
+      "prefix": "ngx-nations",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/nation-flag-angular/tsconfig.lib.json",
+            "project": "libs/nation-flag-angular/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/nation-flag-angular/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/nation-flag-angular/src/**/*.ts",
+              "libs/nation-flag-angular/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/nation-flag-angular"],
+          "options": {
+            "jestConfig": "libs/nation-flag-angular/jest.config.js",
             "passWithNoTests": true
           }
         }

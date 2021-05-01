@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { SvgIconsModule } from '@ngneat/svg-icon';
-import { NgxNationsIconModule } from '@ngx-nations/icon';
 import {
   flagAf,
   flagAm,
@@ -66,7 +65,6 @@ import { NationListModule } from '../../shared/list/list.module';
     CommonModule,
     AsiaRoutingModule,
     NationListModule,
-    NgxNationsIconModule,
     SvgIconsModule.forChild([
       flagAf,
       flagAm,
