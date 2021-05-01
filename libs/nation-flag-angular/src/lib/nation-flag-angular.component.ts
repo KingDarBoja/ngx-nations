@@ -1,10 +1,18 @@
 /* eslint-disable @nrwl/nx/enforce-module-boundaries */
-import { ChangeDetectionStrategy, Component, Inject, Input } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  Inject,
+  Input,
+} from '@angular/core';
 import { SvgIconRegistry } from '@ngneat/svg-icon';
+import { Nation } from '@ngx-nations/core';
 import '@ngx-nations/nation-flag';
 import type { NationFlagVariant } from '@ngx-nations/nation-flag';
-import { NgxNationsIconConfig, NGX_NATIONS_ICON_CONFIG } from './nation-di-tokens';
-import { NgxNationIcon } from './nation-types';
+import {
+  NgxNationFlagConfig,
+  NGX_NATION_FlAG_CONFIG,
+} from './nation-di-tokens';
 
 @Component({
   selector: 'nation-flag-angular',
@@ -16,6 +24,7 @@ import { NgxNationIcon } from './nation-types';
       }"
     >
       <nation-flag
+        class="ni-svg"
         [ngStyle]="{ 'font-size': fontSize }"
         [attr.variant]="variant"
         [attr.nation]="nationSVG"
@@ -27,7 +36,7 @@ import { NgxNationIcon } from './nation-types';
             order: position === 'start' ? -1 : 1
           }"
         >
-          {{ nation | nationName }}
+          {{ code | nationName }}
         </div>
       </ng-container>
     </div>
@@ -45,10 +54,10 @@ export class NationFlagAngularComponent {
     return this._fontSize;
   }
 
-  @Input() set nation(code: NgxNationIcon) {
+  @Input() set nation(code: Nation) {
     const nation = this.svgIconRegistry.get(code);
-    // console.log(nation);
     if (nation) {
+      this._code = code;
       this._nationSVG = nation;
     }
   }
@@ -57,10 +66,14 @@ export class NationFlagAngularComponent {
    * Display the country name, which can be changed at runtime based on the
    * selected locale.
    */
-  @Input() showName = false;
-  @Input() direction: NgxNationsIconConfig['direction'];
-  @Input() position: NgxNationsIconConfig['position'];
+  @Input() showName: boolean;
+  @Input() direction: NgxNationFlagConfig['direction'];
+  @Input() position: NgxNationFlagConfig['position'];
 
+  private _code = '';
+  get code() {
+    return this._code;
+  }
   private _fontSize = '1rem';
   private _nationSVG = '';
   get nationSVG() {
@@ -68,9 +81,14 @@ export class NationFlagAngularComponent {
   }
 
   constructor(
-    @Inject(NGX_NATIONS_ICON_CONFIG) private readonly config: NgxNationsIconConfig,
+    @Inject(NGX_NATION_FlAG_CONFIG)
+    private readonly config: NgxNationFlagConfig,
     private readonly svgIconRegistry: SvgIconRegistry,
-  ) {}
+  ) {
+    this.showName = this.config.showName;
+    this.direction = this.config.direction;
+    this.position = this.config.position;
+  }
 
   private coerceCssPixelValue(value: string | number): string {
     return typeof value === 'string' ? value : `${value}px`;

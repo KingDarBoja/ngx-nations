@@ -1,0 +1,16 @@
+:host {
+  display: block;
+}
+
+.ni-container {
+  display: flex;
+  align-items: center;
+
+  & > * {
+    display: flex;
+  }
+
+  .ni-name {
+    padding: 4px;
+  }
+}

@@ -1,6 +1,3 @@
-
-import { LocaleData } from 'i18n-iso-countries/dist/types';
-
 export declare type Nation =
   | 'ac'
   | 'ad'
