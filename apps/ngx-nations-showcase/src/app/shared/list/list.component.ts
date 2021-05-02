@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
-import { Nation } from '@nation/core-angular';
+import { NationFlag } from '@nation/tw-flags';
 
 export interface NationData {
   name: string;
-  iconCode: Nation;
+  iconCode: NationFlag['name'];
 }
 
 @Component({

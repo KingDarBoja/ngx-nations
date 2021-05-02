@@ -5,11 +5,11 @@ import {
   Pipe,
   PipeTransform,
 } from '@angular/core';
-import { getName } from '@nation/i18n';
+import { getName, LocaleCode } from '@nation/i18n';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { NgxNationsCoreService } from '../core.service';
-import { NationLocale } from '../types';
+
 
 @Pipe({
   name: 'nationName',
@@ -29,7 +29,7 @@ export class NationNamePipe implements PipeTransform, OnDestroy {
 
   transform(
     value: string,
-    locale?: NationLocale,
+    locale?: LocaleCode | string,
     alternative?: number,
   ): string {
     const names = getName(value, locale ?? this.config.locale());

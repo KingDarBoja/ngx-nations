@@ -5,7 +5,6 @@ import {
   Inject,
   Input,
 } from '@angular/core';
-import { Nation } from '@nation/core-angular';
 import '@ngx-nations/nation-flag';
 import type { NationFlagVariant } from '@ngx-nations/nation-flag';
 import {
@@ -54,7 +53,7 @@ export class NationFlagAngularComponent {
     return this._fontSize;
   }
 
-  @Input() set nation(code: Nation) {
+  @Input() set nation(code: string) {
     const nation = this.registry.get(code);
     if (nation) {
       this._code = code;

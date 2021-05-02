@@ -6,11 +6,12 @@ import {
   CountryName,
   GetNameOptions,
   LocaleData,
+  LocaleDataCountry,
   LocalizedCountry,
   LocalizedCountryNames,
 } from './types';
 
-const registeredLocales = {} as Record<string, LocaleData['countries']>;
+const registeredLocales = {} as Record<string, LocaleDataCountry>;
 
 /*
  * All codes map to ISO 3166-1 alpha-2
@@ -278,8 +279,10 @@ export function getNames<T extends GetNameOptions>(
     select: 'official',
   },
 ): LocalizedCountryNames<T> {
-  const localeList = registeredLocales[lang.toLowerCase()];
-  if (localeList === undefined) return {};
+  const localeList: LocaleDataCountry | undefined = registeredLocales[lang.toLowerCase()];
+  if (localeList === undefined) {
+    return {};
+  }
   return localeFilter(
     localeList as LocalizedCountry<T>,
     (nameList: CountryName<T>) => {

@@ -1,5 +1,4 @@
 import { InjectionToken } from '@angular/core';
-import { Nation } from '@nation/core-angular';
 
 export interface NgxNationFlagConfig {
   icons?: NationFlagSVG[];
@@ -9,7 +8,7 @@ export interface NgxNationFlagConfig {
 }
 
 export interface NationFlagSVG {
-  name: Nation;
+  name: string;
   data: string;
 }
 

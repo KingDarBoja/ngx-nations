@@ -1,9 +1,8 @@
 import { InjectionToken } from '@angular/core';
-import { NationLocale } from './types';
-import { LocaleData } from '@nation/i18n';
+import { LocaleCode, LocaleData } from '@nation/i18n';
 
-export declare type NgxNationLocaleEntry = {
-  locale: NationLocale | string;
+export type NgxNationLocaleEntry = {
+  locale: LocaleCode | string;
   countries: LocaleData['countries'];
 };
 

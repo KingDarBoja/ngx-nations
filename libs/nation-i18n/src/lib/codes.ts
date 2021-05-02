@@ -1,6 +1,6 @@
 import { Alpha2Code, Alpha3Code } from './types';
 
-type CountryCodeIdentifier = readonly [
+export type CountryCodeIdentifier = readonly [
   alpha2Code: Alpha2Code,
   alpha3Code: Alpha3Code,
   numeric: string,
