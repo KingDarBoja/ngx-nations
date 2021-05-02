@@ -9,9 +9,9 @@ import {
 export class NationFlagAngularRegistry {
   private readonly flagRegistryMap = new Map<string, string>();
 
-  constructor(@Inject(NGX_NATION_FlAG_CONFIG) config: NgxNationFlagConfig) {
-    if (config.icons) {
-      this.register(config.icons);
+  constructor(@Inject(NGX_NATION_FlAG_CONFIG) private readonly config: NgxNationFlagConfig) {
+    if (this.config.icons) {
+      this.register(this.config.icons);
     }
   }
 

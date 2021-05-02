@@ -12,7 +12,7 @@ template.innerHTML = `
 <div class="nf-container"></div>
 `;
 
-export type NationFlagVariant = 'bordered' | 'wavy' | 'combined' | 'none';
+type NationFlagVariant = 'bordered' | 'wavy' | 'combined' | 'none';
 
 export class NationFlagElement extends HTMLElement {
   div: HTMLDivElement;
@@ -87,12 +87,13 @@ export class NationFlagElement extends HTMLElement {
         );
         newLinearGradient.setAttribute('id', 'wave');
         newLinearGradient.setAttribute('gradientTransform', 'rotate(-45)');
+        newLinearGradient.setAttribute('gradientUnits', 'userSpaceOnUse');
         for (const [offset, stopColor] of [
           [0, 0],
           [25, 0.1],
           [50, 0],
           [75, 0.1],
-          [100, 0.1],
+          [100, 0],
         ]) {
           const stopGradient = document.createElementNS(
             'http://www.w3.org/2000/svg',
@@ -124,10 +125,10 @@ export class NationFlagElement extends HTMLElement {
         clipperUse.setAttribute('fill', 'rgba(0, 0, 0, 0.5)');
         clipperUse.setAttribute('mask', 'url(#clipper)');
         switch (variant) {
-          case 'bordered':
+          case 'wavy':
             cloneSvgElement.appendChild(waveUse);
             break;
-          case 'wavy':
+          case 'bordered':
             cloneSvgElement.appendChild(clipperUse);
             break;
           case 'combined':

@@ -6,7 +6,6 @@ import {
   Input,
 } from '@angular/core';
 import '@ngx-nations/nation-flag';
-import type { NationFlagVariant } from '@ngx-nations/nation-flag';
 import {
   NgxNationFlagConfig,
   NGX_NATION_FlAG_CONFIG,
@@ -44,7 +43,6 @@ import { NationFlagAngularRegistry } from './nation-flag-angular.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NationFlagAngularComponent {
-  @Input() variant: NationFlagVariant = 'combined';
   @Input() set fontSize(value: number | string) {
     this._fontSize = this.coerceCssPixelValue(value);
   }
@@ -61,11 +59,12 @@ export class NationFlagAngularComponent {
     }
   }
 
+  @Input() variant: NgxNationFlagConfig['variant'];
   /**
    * Display the country name, which can be changed at runtime based on the
    * selected locale.
    */
-  @Input() showName: boolean;
+  @Input() showName: NgxNationFlagConfig['showName'];
   @Input() direction: NgxNationFlagConfig['direction'];
   @Input() position: NgxNationFlagConfig['position'];
 
@@ -84,6 +83,7 @@ export class NationFlagAngularComponent {
     private readonly config: NgxNationFlagConfig,
     private readonly registry: NationFlagAngularRegistry,
   ) {
+    this.variant = this.config.variant ?? 'none';
     this.showName = this.config.showName ?? true;
     this.direction = this.config.direction ?? 'column';
     this.position = this.config.position ?? 'end';

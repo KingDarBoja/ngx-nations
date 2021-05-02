@@ -18,6 +18,7 @@ import { AppRoutingModule } from './app.routing';
       locales: [LocaleEN, LocaleES, LocaleFR, LocalePT],
     }),
     NationFlagAngularModule.forRoot({
+      variant: 'combined',
       icons: [nationFlagUa],
     }),
   ],

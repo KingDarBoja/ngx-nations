@@ -3,6 +3,7 @@ import { InjectionToken } from '@angular/core';
 export interface NgxNationFlagConfig {
   icons?: NationFlagSVG[];
   showName: boolean;
+  variant: 'bordered' | 'wavy' | 'combined' | 'none';
   direction: 'row' | 'column';
   position: 'start' | 'end';
 }

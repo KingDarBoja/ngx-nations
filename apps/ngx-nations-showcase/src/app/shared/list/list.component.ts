@@ -15,43 +15,47 @@ export interface NationData {
       <h3 class="section-subtitle">Tree-shakeable Demo</h3>
 
       <div class="nation-grid">
-        <div class="nation-item">
+      <div class="nation-item">
           <!-- <p class="nation-name">Colombia</p> -->
-          <p class="nation-code">co</p>
+          <p class="nation-code">Style - Default (None)</p>
           <nation-flag-angular
             [nation]="'co'"
             fontSize="100px"
           ></nation-flag-angular>
         </div>
         <div class="nation-item">
-          <!-- <p class="nation-name">Tanzania</p> -->
+          <p class="nation-name">Style - Bordered</p>
           <p class="nation-code">tz</p>
           <nation-flag-angular
             [nation]="'tz'"
+            [variant]="'bordered'"
             fontSize="100px"
           ></nation-flag-angular>
         </div>
         <div class="nation-item">
-          <!-- <p class="nation-name">Ukraine</p> -->
+          <p class="nation-name">Style - None</p>
           <p class="nation-code">ua</p>
           <nation-flag-angular
             [nation]="'ua'"
+            [variant]="'none'"
             fontSize="100px"
           ></nation-flag-angular>
         </div>
         <div class="nation-item">
-          <!-- <p class="nation-name">Tajikistan</p> -->
+          <p class="nation-name">Style - Wavy</p>
           <p class="nation-code">tj</p>
           <nation-flag-angular
             [nation]="'tj'"
+            [variant]="'wavy'"
             fontSize="100px"
           ></nation-flag-angular>
         </div>
         <div class="nation-item">
-          <!-- <p class="nation-name">Tonga</p> -->
+          <p class="nation-name">Style - Combined</p>
           <p class="nation-code">to</p>
           <nation-flag-angular
             [nation]="'to'"
+            [variant]="'combined'"
             fontSize="100px"
           ></nation-flag-angular>
         </div>
