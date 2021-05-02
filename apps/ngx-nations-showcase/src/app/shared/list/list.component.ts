@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Nation } from '@ngx-nations/core';
+import { Nation } from '@nation/core-angular';
 
 export interface NationData {
   name: string;
@@ -18,27 +18,42 @@ export interface NationData {
         <div class="nation-item">
           <!-- <p class="nation-name">Colombia</p> -->
           <p class="nation-code">co</p>
-          <nation-flag-angular [nation]="'co'" fontSize="100px"></nation-flag-angular>
+          <nation-flag-angular
+            [nation]="'co'"
+            fontSize="100px"
+          ></nation-flag-angular>
         </div>
         <div class="nation-item">
           <!-- <p class="nation-name">Tanzania</p> -->
           <p class="nation-code">tz</p>
-          <nation-flag-angular [nation]="'tz'" fontSize="100px"></nation-flag-angular>
+          <nation-flag-angular
+            [nation]="'tz'"
+            fontSize="100px"
+          ></nation-flag-angular>
         </div>
         <div class="nation-item">
           <!-- <p class="nation-name">Ukraine</p> -->
           <p class="nation-code">ua</p>
-          <nation-flag-angular [nation]="'ua'" fontSize="100px"></nation-flag-angular>
+          <nation-flag-angular
+            [nation]="'ua'"
+            fontSize="100px"
+          ></nation-flag-angular>
         </div>
         <div class="nation-item">
           <!-- <p class="nation-name">Tajikistan</p> -->
           <p class="nation-code">tj</p>
-          <nation-flag-angular [nation]="'tj'" fontSize="100px"></nation-flag-angular>
+          <nation-flag-angular
+            [nation]="'tj'"
+            fontSize="100px"
+          ></nation-flag-angular>
         </div>
         <div class="nation-item">
           <!-- <p class="nation-name">Tonga</p> -->
           <p class="nation-code">to</p>
-          <nation-flag-angular [nation]="'to'" fontSize="100px"></nation-flag-angular>
+          <nation-flag-angular
+            [nation]="'to'"
+            fontSize="100px"
+          ></nation-flag-angular>
         </div>
       </div>
     </div>

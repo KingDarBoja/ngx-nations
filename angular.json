@@ -165,43 +165,6 @@
         }
       }
     },
-    "core": {
-      "projectType": "library",
-      "root": "libs/core",
-      "sourceRoot": "libs/core/src",
-      "prefix": "ngx-nations",
-      "architect": {
-        "build": {
-          "builder": "@nrwl/angular:package",
-          "options": {
-            "tsConfig": "libs/core/tsconfig.lib.json",
-            "project": "libs/core/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "libs/core/tsconfig.lib.prod.json"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/core/src/**/*.ts",
-              "libs/core/src/**/*.html"
-            ]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/core"],
-          "options": {
-            "jestConfig": "libs/core/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
     "nation-flag": {
       "root": "libs/nation-flag",
       "sourceRoot": "libs/nation-flag/src",
@@ -320,6 +283,43 @@
             "packageJson": "libs/nation-tw-flags/package.json",
             "main": "libs/nation-tw-flags/src/index.ts",
             "assets": ["libs/nation-tw-flags/*.md"]
+          }
+        }
+      }
+    },
+    "nation-core-angular": {
+      "projectType": "library",
+      "root": "libs/nation-core-angular",
+      "sourceRoot": "libs/nation-core-angular/src",
+      "prefix": "ngx-nations",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/nation-core-angular/tsconfig.lib.json",
+            "project": "libs/nation-core-angular/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/nation-core-angular/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/nation-core-angular/src/**/*.ts",
+              "libs/nation-core-angular/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/nation-core-angular"],
+          "options": {
+            "jestConfig": "libs/nation-core-angular/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }

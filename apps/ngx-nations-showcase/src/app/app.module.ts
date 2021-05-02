@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgxNationsCoreModule } from '@ngx-nations/core';
+import { NgxNationsCoreModule } from '@nation/core-angular';
 
 import { NationFlagAngularModule } from '@ngx-nations/nation-flag-angular';
 import { nationFlagUa } from '@nation/tw-flags';

@@ -5,7 +5,7 @@ import {
   Inject,
   Input,
 } from '@angular/core';
-import { Nation } from '@ngx-nations/core';
+import { Nation } from '@nation/core-angular';
 import '@ngx-nations/nation-flag';
 import type { NationFlagVariant } from '@ngx-nations/nation-flag';
 import {

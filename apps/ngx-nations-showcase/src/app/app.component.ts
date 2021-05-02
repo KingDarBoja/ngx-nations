@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgxNationsCoreService } from '@ngx-nations/core';
+import { NgxNationsCoreService } from '@nation/core-angular';
 import { map, startWith } from 'rxjs/operators';
 
 @Component({
@@ -12,7 +12,7 @@ export class AppComponent {
   readonly locales = this.config.getLocales();
   readonly currentLocale$ = this.config.locale$.pipe(
     startWith([]),
-    map(() => this.config.locale())
+    map(() => this.config.locale()),
   );
   menuVisible = false;
 

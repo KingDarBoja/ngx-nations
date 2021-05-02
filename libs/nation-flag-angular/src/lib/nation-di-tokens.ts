@@ -1,5 +1,5 @@
 import { InjectionToken } from '@angular/core';
-import { Nation } from '@ngx-nations/core';
+import { Nation } from '@nation/core-angular';
 
 export interface NgxNationFlagConfig {
   icons?: NationFlagSVG[];
@@ -20,4 +20,6 @@ export interface NgxNationFlagIconConfig {
 export const NGX_NATION_FlAG_CONFIG = new InjectionToken<NgxNationFlagConfig>(
   'NGX_NATION_FlAG_CONFIG',
 );
-export const NGX_NATION_FLAG_ICON_CONFIG = new InjectionToken<NgxNationFlagIconConfig>('NGX_NATION_FlAG_CONFIG');
+export const NGX_NATION_FLAG_ICON_CONFIG = new InjectionToken<NgxNationFlagIconConfig>(
+  'NGX_NATION_FlAG_CONFIG',
+);

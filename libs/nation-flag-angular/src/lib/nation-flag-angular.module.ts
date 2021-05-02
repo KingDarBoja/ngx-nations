@@ -6,7 +6,7 @@ import {
   Optional,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NgxNationsCoreModule } from '@ngx-nations/core';
+import { NgxNationsCoreModule } from '@nation/core-angular';
 import { NationFlagAngularComponent } from './nation-flag-angular.component';
 import {
   NationFlagSVG,

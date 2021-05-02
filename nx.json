@@ -1,30 +1,49 @@
 {
   "implicitDependencies": {
     "angular.json": "*",
-    "package.json": { "dependencies": "*", "devDependencies": "*" },
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
     "tsconfig.base.json": "*",
     "tslint.json": "*",
     ".eslintrc.json": "*",
     "nx.json": "*"
   },
-  "affected": { "defaultBase": "master" },
+  "affected": {
+    "defaultBase": "master"
+  },
   "npmScope": "ngx-nations",
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
-      "options": { "cacheableOperations": ["build", "lint", "test", "e2e"] }
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
+      }
     }
   },
   "projects": {
-    "ngx-nations-showcase": { "tags": [] },
+    "ngx-nations-showcase": {
+      "tags": ["scope:public", "type:showcase"]
+    },
     "ngx-nations-showcase-e2e": {
-      "tags": [],
+      "tags": ["scope:public", "type:test"],
       "implicitDependencies": ["ngx-nations-showcase"]
     },
-    "core": { "tags": ["scope:public", "type:core"] },
-    "nation-flag": { "tags": ["scope:public", "type:ui"] },
-    "nation-flag-angular": { "tags": ["scope:public", "type:ui"] },
-    "nation-i18n": { "tags": ["scope:public", "type:core"] },
-    "nation-tw-flags": { "tags": ["[scope:public", "type:assets"] }
+    "nation-flag": {
+      "tags": ["scope:public", "type:ui"]
+    },
+    "nation-flag-angular": {
+      "tags": ["scope:public", "type:ui"]
+    },
+    "nation-i18n": {
+      "tags": ["scope:public", "type:core"]
+    },
+    "nation-tw-flags": {
+      "tags": ["[scope:public", "type:assets"]
+    },
+    "nation-core-angular": {
+      "tags": ["scope:public", "type:core"]
+    }
   }
 }
