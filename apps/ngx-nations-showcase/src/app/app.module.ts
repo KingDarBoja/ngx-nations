@@ -8,6 +8,7 @@ import { LocaleEN, LocaleES, LocaleFR, LocalePT } from '@nation/i18n';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing';
+import { ScullyLibModule } from '@scullyio/ng-lib';
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,6 +22,7 @@ import { AppRoutingModule } from './app.routing';
       variant: 'combined',
       icons: [nationFlagUa],
     }),
+    ScullyLibModule,
   ],
   bootstrap: [AppComponent],
 })

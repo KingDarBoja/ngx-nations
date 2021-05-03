@@ -40,3 +40,7 @@ Thumbs.db
 
 # source-map-explorer
 result.html
+
+# Scully
+/.scully
+scully.log
