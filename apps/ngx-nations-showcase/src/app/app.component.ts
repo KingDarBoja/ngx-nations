@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgxNationsCoreService } from '@nation/core-angular';
+import { NgxNationsCoreService } from '@nation/ngx-core';
 import { map, startWith } from 'rxjs/operators';
 
 @Component({
@@ -20,7 +20,7 @@ export class AppComponent {
   yarn add @ngx-nations
   `;
   readonly importCode = `
-  import { NationFlagAngularModule } from '@ngx-nations/nation-flag-angular';
+  import { NationFlagAngularModule } from '@nation/ngx-flag';
   import { nationFlagUa } from '@nation/tw-flags';
   import { LocaleEN, LocaleES, LocaleFR, LocalePT } from '@nation/i18n';
 

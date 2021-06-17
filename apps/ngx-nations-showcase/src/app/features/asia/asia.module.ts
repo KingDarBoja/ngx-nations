@@ -53,7 +53,7 @@ import {
   nationFlagVn,
   nationFlagYe,
 } from '@nation/tw-flags';
-import { NationFlagAngularModule } from '@ngx-nations/nation-flag-angular';
+import { NationFlagAngularModule } from '@nation/ngx-flag';
 
 import { AsiaComponent } from './asia.component';
 import { AsiaRoutingModule } from './asia.routing';

@@ -25,7 +25,7 @@ import {
   nationFlagTv,
   nationFlagVu,
 } from '@nation/tw-flags';
-import { NationFlagAngularModule } from '@ngx-nations/nation-flag-angular';
+import { NationFlagAngularModule } from '@nation/ngx-flag';
 
 import { OceaniaComponent } from './oceania.component';
 import { OceaniaRoutingModule } from './oceania.routing';

@@ -28,7 +28,7 @@ export function NgxNationsLocalesFactory(
 }
 
 @NgModule({
-  exports: PIPES,
+  exports: [...PIPES],
 })
 export class NgxNationsCoreModule {
   static forRoot(

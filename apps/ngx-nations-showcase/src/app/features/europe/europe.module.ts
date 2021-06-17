@@ -60,7 +60,7 @@ import {
   nationFlagVa,
   nationFlagXk,
 } from '@nation/tw-flags';
-import { NationFlagAngularModule } from '@ngx-nations/nation-flag-angular';
+import { NationFlagAngularModule } from '@nation/ngx-flag';
 
 import { EuropeComponent } from './europe.component';
 import { EuropeRoutingModule } from './europe.routing';

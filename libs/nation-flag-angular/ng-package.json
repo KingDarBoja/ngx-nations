@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../dist/libs/nation-flag-angular",
+  "dest": "../../dist/libs/nation-ngx-flag",
   "lib": {
     "entryFile": "src/index.ts"
   }

@@ -1,5 +1,5 @@
 {
-  "name": "@ngx-nations/nation-flag-angular",
+  "name": "@nation/ngx-flag",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^11.2.7",

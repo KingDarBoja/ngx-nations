@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgxNationsCoreModule } from '@nation/core-angular';
+import { NgxNationsCoreModule } from '@nation/ngx-core';
 
-import { NationFlagAngularModule } from '@ngx-nations/nation-flag-angular';
+import { NationFlagAngularModule } from '@nation/ngx-flag';
 import { nationFlagUa } from '@nation/tw-flags';
 import { LocaleEN, LocaleES, LocaleFR, LocalePT } from '@nation/i18n';
 

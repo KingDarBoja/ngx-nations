@@ -58,7 +58,7 @@ import {
   nationFlagZm,
   nationFlagZw,
 } from '@nation/tw-flags';
-import { NationFlagAngularModule } from '@ngx-nations/nation-flag-angular';
+import { NationFlagAngularModule } from '@nation/ngx-flag';
 
 import { AfricaComponent } from './africa.component';
 import { AfricaRoutingModule } from './africa.routing';

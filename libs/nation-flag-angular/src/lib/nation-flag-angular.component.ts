@@ -5,7 +5,7 @@ import {
   Inject,
   Input,
 } from '@angular/core';
-import '@ngx-nations/nation-flag';
+import '@nation/flag';
 import {
   NgxNationFlagConfig,
   NGX_NATION_FlAG_CONFIG,

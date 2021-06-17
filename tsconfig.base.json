@@ -15,15 +15,11 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@ngx-nations/icon/tw-icons": ["dist/libs/icon/tw-icons/index.js"],
-      "@ngx-nations/icon/lp-icons": ["dist/libs/icon/lp-icons/index.js"],
-      "@ngx-nations/nation-flag": ["libs/nation-flag/src/index.ts"],
-      "@ngx-nations/nation-flag-angular": [
-        "libs/nation-flag-angular/src/index.ts"
-      ],
+      "@nation/flag": ["libs/nation-flag/src/index.ts"],
+      "@nation/ngx-flag": ["libs/nation-flag-angular/src/index.ts"],
       "@nation/i18n": ["libs/nation-i18n/src/index.ts"],
       "@nation/tw-flags": ["libs/nation-tw-flags/src/index.ts"],
-      "@nation/core-angular": ["libs/nation-core-angular/src/index.ts"]
+      "@nation/ngx-core": ["libs/nation-core-angular/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -10,21 +10,20 @@ import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { NgxNationsCoreService } from '../core.service';
 
-
 @Pipe({
   name: 'nationName',
   pure: false,
 })
 export class NationNamePipe implements PipeTransform, OnDestroy {
-  private destroy$: Subject<boolean> = new Subject<boolean>();
+  private readonly destroy$: Subject<boolean> = new Subject<boolean>();
 
   constructor(
     private readonly config: NgxNationsCoreService,
-    private readonly cd: ChangeDetectorRef,
+    private readonly cdr: ChangeDetectorRef,
   ) {
     this.config.locale$
       .pipe(takeUntil(this.destroy$))
-      .subscribe(() => this.cd.markForCheck());
+      .subscribe(() => this.cdr.markForCheck());
   }
 
   transform(

@@ -40,7 +40,7 @@ import {
   nationFlagVc,
   nationFlagVe,
 } from '@nation/tw-flags';
-import { NationFlagAngularModule } from '@ngx-nations/nation-flag-angular';
+import { NationFlagAngularModule } from '@nation/ngx-flag';
 
 import { AmericaComponent } from './america.component';
 import { AmericaRoutingModule } from './america.routing';
