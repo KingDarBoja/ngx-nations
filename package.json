@@ -44,6 +44,7 @@
     "@scullyio/init": "^1.1.4",
     "@scullyio/ng-lib": "1.1.1",
     "@scullyio/scully": "1.1.1",
+    "ngx-highlightjs": "^4.1.4",
     "normalize-diacritics": "^2.13.2",
     "rxjs": "~6.6.3",
     "tslib": "^2.0.0",

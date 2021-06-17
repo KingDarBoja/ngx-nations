@@ -6,83 +6,106 @@
 
 <ng-template #header>
   <header class="bg-purple-900 py-6">
-    <div class="container mx-auto px-4 text-center">
-      <img
-        alt="Nx logo"
-        width="75"
-        class="mx-auto"
-        src="https://nx.dev/assets/images/nx-logo-white.svg"
-      />
-      <h1 class="text-white font-bold text-2xl">Welcome to {{ title }}!</h1>
-    </div>
+    <section class="container mx-auto px-4 text-white space-y-4">
+      <section class="">
+        <h1 class="font-bold text-2xl text-center">Welcome to {{ title }}!</h1>
+        <p class="py-1">
+          Get the world nations i18n names and flag icons in your Angular apps.
+        </p>
+      </section>
+
+      <section class="flex flex-col space-y-4">
+        <h3 class="font-bold text-lg">Getting Started</h3>
+        <p>
+          To start using both the i18n directives and flag icon components,
+          first install this package via <i>npm</i> or <i>yarn</i>:
+        </p>
+        <pre class="h-36">
+          <code [highlight]="installCode"></code>
+        </pre>
+
+        <p>
+          Then import the `NgxNationsCoreModule` along with the locales to be
+          supported for nations i18n plus register the flags at the
+          `NationFlagAngularModule.forRoot()` as follows:
+        </p>
+
+        <pre><code [highlight]="importCode"></code></pre>
+
+        <p>
+          <b>IMPORTANT NOTICE</b> This readme is still a work-in-progress, so
+          not every feature is well documented.
+        </p>
+      </section>
+    </section>
   </header>
 </ng-template>
 
 <ng-template #body>
-  <div class="app-body">
-    <div class="container mx-auto px-4">
-      <h1 class="mb-2 font-semibold text-lg">Lazy Loaded Modules</h1>
-      <div class="flex items-center justify-between">
-        <div class="flex flex-grow">
-          <div class="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-4">
-            <button
-              class="col-span-2 bg-transparent font-semibold py-2 px-4 border border-white hover:border-transparent rounded"
-              [routerLink]="'./'"
-              [routerLinkActive]="'bg-blue-500'"
-              [routerLinkActiveOptions]="{ exact: true }"
-            >
-              HOME
-            </button>
-            <button
-              *ngFor="let continent of continents"
-              class="col-span-2 bg-transparent font-semibold py-2 px-4 border border-white hover:border-transparent rounded"
-              [routerLink]="continent"
-              [routerLinkActive]="'bg-blue-500'"
-            >
-              {{ continent | uppercase }}
-            </button>
+  <section class="app-body">
+    <section class="container mx-auto py-2">
+      <section class="">
+        <p>
+          Each flag has been optimised and exported as module to allow
+          tree-shaking as the user can define which flags can be loaded via
+          ngModules.
+        </p>
+
+        <p>
+          The following flags have been declared in each lazy-loaded module via
+          <i>forChild()</i> method as follow:
+        </p>
+
+        <pre>
+          <code [highlight]="lazyCode"></code>
+        </pre>
+
+        <p>
+          Where <b>"XX"</b> represents the nation
+          <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2"
+            >ISO 3166-1 Alpha-2 Code</a
+          >
+          and have 3 built-in styles besides the default: 'wavy', 'bordered' and
+          'combined'. These styles can be set along with the font size and the
+          nation code to display as follows:
+        </p>
+
+        <pre>
+          <code [highlight]="configCode"></code>
+        </pre>
+      </section>
+
+      <section class="container mx-auto px-4">
+        <div class="flex items-center justify-between">
+          <div class="flex flex-grow">
+            <div class="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-4">
+              <button
+                class="col-span-2 bg-transparent font-semibold py-2 px-4 border border-white hover:border-transparent rounded"
+                [routerLink]="'./'"
+                [routerLinkActive]="'bg-blue-500'"
+                [routerLinkActiveOptions]="{ exact: true }"
+              >
+                HOME
+              </button>
+              <button
+                *ngFor="let continent of continents"
+                class="col-span-2 bg-transparent font-semibold py-2 px-4 border border-white hover:border-transparent rounded"
+                [routerLink]="continent"
+                [routerLinkActive]="'bg-blue-500'"
+              >
+                {{ continent | uppercase }}
+              </button>
+            </div>
           </div>
+          <ng-container *ngTemplateOutlet="changeLanguage"></ng-container>
         </div>
-        <ng-container *ngTemplateOutlet="changeLanguage"></ng-container>
-      </div>
-    </div>
+      </section>
 
-    <div class="container mx-auto py-2 px-4">
-      <h3 class="section-subtitle">Lazy Loaded Flags at App Module</h3>
-
-      <div class="nation-grid">
-        <div class="nation-item">
-          <!-- <p class="nation-name">Colombia</p> -->
-          <p class="nation-code">co</p>
-          <nation-flag-angular [nation]="'co'" fontSize="100px"></nation-flag-angular>
-        </div>
-        <div class="nation-item">
-          <!-- <p class="nation-name">Tanzania</p> -->
-          <p class="nation-code">tz</p>
-          <nation-flag-angular [nation]="'tz'" fontSize="100px"></nation-flag-angular>
-        </div>
-        <div class="nation-item">
-          <!-- <p class="nation-name">Ukraine</p> -->
-          <p class="nation-code">ua</p>
-          <nation-flag-angular [nation]="'ua'" fontSize="100px"></nation-flag-angular>
-        </div>
-        <div class="nation-item">
-          <!-- <p class="nation-name">Tajikistan</p> -->
-          <p class="nation-code">tj</p>
-          <nation-flag-angular [nation]="'tj'" fontSize="100px"></nation-flag-angular>
-        </div>
-        <div class="nation-item">
-          <!-- <p class="nation-name">Tonga</p> -->
-          <p class="nation-code">to</p>
-          <nation-flag-angular [nation]="'to'" fontSize="100px"></nation-flag-angular>
-        </div>
-      </div>
-    </div>
-
-    <div class="container mx-auto py-2">
-      <router-outlet></router-outlet>
-    </div>
-  </div>
+      <section class="mt-4">
+        <router-outlet></router-outlet>
+      </section>
+    </section>
+  </section>
 </ng-template>
 
 <ng-template #footer>

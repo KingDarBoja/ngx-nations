@@ -9,15 +9,13 @@ export interface NationData {
 @Component({
   selector: 'ngx-nations-list',
   template: `
-    <h1 class="section-title">{{ title }} Section</h1>
-
-    <div class="py-2">
-      <h3 class="section-subtitle">Tree-shakeable Demo</h3>
-
-      <div class="nation-grid">
-      <div class="nation-item">
+    <section class="flex flex-col space-y-4">
+      <h1 class="section-title">{{ title }} Section</h1>
+      <section class="nation-grid">
+        <div class="nation-item">
           <!-- <p class="nation-name">Colombia</p> -->
           <p class="nation-code">Style - Default (None)</p>
+          <p class="nation-code">co</p>
           <nation-flag-angular
             [nation]="'co'"
             fontSize="100px"
@@ -59,22 +57,22 @@ export interface NationData {
             fontSize="100px"
           ></nation-flag-angular>
         </div>
-      </div>
-    </div>
+      </section>
 
-    <div class="py-2">
-      <h3 class="section-subtitle">All {{ title }} nation Flags</h3>
-      <div class="nation-grid">
-        <div class="nation-item" *ngFor="let nation of nations">
-          <!-- <p class="nation-name">{{ nation.name }}</p> -->
-          <p class="nation-code">{{ nation.iconCode }}</p>
-          <nation-flag-angular
-            [nation]="nation.iconCode"
-            fontSize="100px"
-          ></nation-flag-angular>
+      <section class="">
+        <h3 class="section-subtitle">All {{ title }} nation Flags</h3>
+        <div class="nation-grid">
+          <div class="nation-item" *ngFor="let nation of nations">
+            <!-- <p class="nation-name">{{ nation.name }}</p> -->
+            <p class="nation-code">{{ nation.iconCode }}</p>
+            <nation-flag-angular
+              [nation]="nation.iconCode"
+              fontSize="100px"
+            ></nation-flag-angular>
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </section>
   `,
 })
 export class NationListComponent {

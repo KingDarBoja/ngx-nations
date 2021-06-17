@@ -2,10 +2,11 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+@import '~highlight.js/styles/atom-one-dark.css';
 
 @layer components {
   .app-body {
-    @apply flex flex-col flex-grow bg-purple-800 font-bold text-white space-y-6 divide-y py-6;
+    @apply flex flex-col flex-grow bg-purple-800 text-white space-y-6 divide-y py-6;
   }
 
   .app-footer {

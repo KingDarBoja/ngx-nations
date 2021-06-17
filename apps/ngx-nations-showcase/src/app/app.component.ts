@@ -15,6 +15,48 @@ export class AppComponent {
     map(() => this.config.locale()),
   );
   menuVisible = false;
+  readonly installCode = `
+  npm install @ngx-nations
+  yarn add @ngx-nations
+  `;
+  readonly importCode = `
+  import { NationFlagAngularModule } from '@ngx-nations/nation-flag-angular';
+  import { nationFlagUa } from '@nation/tw-flags';
+  import { LocaleEN, LocaleES, LocaleFR, LocalePT } from '@nation/i18n';
+
+  @NgModule({
+    declarations: [AppComponent],
+    imports: [
+      // ... Other module imports
+      NgxNationsCoreModule.forRoot({
+        locales: [LocaleEN, LocaleES, LocaleFR, LocalePT],
+      }),
+      NationFlagAngularModule.forRoot({
+        variant: 'combined',
+        icons: [nationFlagUa],
+      }),
+    ],
+    bootstrap: [AppComponent],
+  })
+  export class AppModule {}
+  `;
+  readonly lazyCode = `
+  import { nationFlagXX } from '@nation/tw-flags';
+
+  @NgModule({
+    imports: [
+      NationFlagAngularModule.forChild([nationFlagXX]),
+    ],
+  })
+  export class AppModule {}
+  `;
+  readonly configCode = `
+  <nation-flag-angular
+    [nation]="'to'"
+    [variant]="'combined'"
+    fontSize="100px"
+  ></nation-flag-angular>
+  `;
 
   constructor(private readonly config: NgxNationsCoreService) {}
 

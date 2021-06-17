@@ -17,10 +17,6 @@ This project was developed using [Nx Workspaces](https://nx.dev/angular), which 
 
 Run the `npm install` / `yarn` command after cloning the repository locally in order to install the dependencies.
 
-### TODO List
-
-- Host the demo using GitHub Pages + [Scully](https://scully.io/)
-
 ## Credits
 
 The amazing country flag icons assets used for this library are listed below:
