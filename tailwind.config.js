@@ -1,7 +1,11 @@
-module.exports = {
+module.exports = (isProd) => ({
   prefix: '',
   purge: {
-    content: ['./apps/**/*.{html,ts}', './libs/**/*.{html,ts}'],
+    enabled: isProd,
+    content: [
+      './apps/**/*.{html,ts}',
+      './libs/**/*.{html,ts}',
+    ]
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -11,4 +15,4 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-};
+});

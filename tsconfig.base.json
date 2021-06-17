@@ -16,10 +16,10 @@
     "baseUrl": ".",
     "paths": {
       "@nation/flag": ["libs/nation-flag/src/index.ts"],
-      "@nation/ngx-flag": ["libs/nation-flag-angular/src/index.ts"],
       "@nation/i18n": ["libs/nation-i18n/src/index.ts"],
-      "@nation/tw-flags": ["libs/nation-tw-flags/src/index.ts"],
-      "@nation/ngx-core": ["libs/nation-core-angular/src/index.ts"]
+      "@nation/ngx-core": ["libs/nation-core-angular/src/index.ts"],
+      "@nation/ngx-flag": ["libs/nation-flag-angular/src/index.ts"],
+      "@nation/tw-flags": ["libs/nation-tw-flags/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -23,12 +23,8 @@
     }
   },
   "projects": {
-    "ngx-nations-showcase": {
-      "tags": ["scope:public", "type:showcase"]
-    },
-    "ngx-nations-showcase-e2e": {
-      "tags": ["scope:public", "type:test"],
-      "implicitDependencies": ["ngx-nations-showcase"]
+    "nation-core-angular": {
+      "tags": ["scope:public", "type:core"]
     },
     "nation-flag": {
       "tags": ["scope:public", "type:ui"]
@@ -42,8 +38,12 @@
     "nation-tw-flags": {
       "tags": ["[scope:public", "type:assets"]
     },
-    "nation-core-angular": {
-      "tags": ["scope:public", "type:core"]
+    "ngx-nations-showcase": {
+      "tags": ["scope:public", "type:showcase"]
+    },
+    "ngx-nations-showcase-e2e": {
+      "tags": ["scope:public", "type:test"],
+      "implicitDependencies": ["ngx-nations-showcase"]
     }
   }
 }
