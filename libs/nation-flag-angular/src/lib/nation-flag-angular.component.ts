@@ -14,6 +14,26 @@ import { NationFlagAngularRegistry } from './nation-flag-angular.service';
 
 @Component({
   selector: 'nation-flag-angular',
+  styles: [
+    `
+      :host {
+        display: block;
+      }
+
+      .ni-container {
+        display: flex;
+        align-items: center;
+
+        & > * {
+          display: flex;
+        }
+
+        .ni-name {
+          padding: 4px;
+        }
+      }
+    `,
+  ],
   template: `
     <div
       class="ni-container"
@@ -39,7 +59,6 @@ import { NationFlagAngularRegistry } from './nation-flag-angular.service';
       </ng-container>
     </div>
   `,
-  styleUrls: ['./nation-flag-angular.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NationFlagAngularComponent {

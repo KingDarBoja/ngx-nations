@@ -9,7 +9,7 @@ template.innerHTML = `
     font-size: 1rem;
   }
 </style>
-<div class="nf-container"></div>
+<div class="nf-container" style="fill: black"></div>
 `;
 
 type NationFlagVariant = 'bordered' | 'wavy' | 'combined' | 'none';
