@@ -1,11 +1,10 @@
-/* eslint-disable @nrwl/nx/enforce-module-boundaries */
 import {
   ChangeDetectionStrategy,
   Component,
   Inject,
   Input,
 } from '@angular/core';
-import '@nation/flag';
+import '@nation/base-flag';
 import {
   NgxNationFlagConfig,
   NGX_NATION_FlAG_CONFIG,

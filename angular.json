@@ -33,22 +33,33 @@
     }
   },
   "projects": {
-    "nation-flag": {
-      "root": "libs/nation-flag",
-      "sourceRoot": "libs/nation-flag/src",
+    "nation-base-flag": {
+      "root": "libs/nation-base-flag",
+      "sourceRoot": "libs/nation-base-flag/src",
       "projectType": "library",
       "architect": {
+        "build": {
+          "builder": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/nation-base-flag",
+            "tsConfig": "libs/nation-base-flag/tsconfig.lib.json",
+            "packageJson": "libs/nation-base-flag/package.json",
+            "main": "libs/nation-base-flag/src/index.ts",
+            "assets": ["libs/nation-base-flag/*.md"]
+          }
+        },
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/nation-flag/**/*.ts"]
+            "lintFilePatterns": ["libs/nation-base-flag/**/*.ts"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/nation-flag"],
+          "outputs": ["coverage/libs/nation-base-flag"],
           "options": {
-            "jestConfig": "libs/nation-flag/jest.config.js",
+            "jestConfig": "libs/nation-base-flag/jest.config.js",
             "passWithNoTests": true
           }
         }

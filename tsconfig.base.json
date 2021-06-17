@@ -19,7 +19,8 @@
       "@nation/i18n": ["libs/nation-i18n/src/index.ts"],
       "@nation/ngx-core": ["libs/nation-ngx-core/src/index.ts"],
       "@nation/ngx-flag": ["libs/nation-ngx-flag/src/index.ts"],
-      "@nation/tw-flags": ["libs/nation-tw-flags/src/index.ts"]
+      "@nation/tw-flags": ["libs/nation-tw-flags/src/index.ts"],
+      "@nation/base-flag": ["libs/nation-base-flag/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -23,7 +23,7 @@
     }
   },
   "projects": {
-    "nation-flag": {
+    "nation-base-flag": {
       "tags": ["scope:public", "type:ui"]
     },
     "nation-i18n": {
