@@ -82,6 +82,7 @@
     "jest": "26.2.2",
     "jest-preset-angular": "8.3.2",
     "ng-packagr": "^11.0.0",
+    "nxpm": "^1.18.0",
     "postcss": "8",
     "postcss-ng-tailwind-in-components": "0.0.4",
     "prettier": "2.2.1",
