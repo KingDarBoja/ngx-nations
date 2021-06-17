@@ -9,11 +9,11 @@ import '@nation/flag';
 import {
   NgxNationFlagConfig,
   NGX_NATION_FlAG_CONFIG,
-} from './nation-di-tokens';
-import { NationFlagAngularRegistry } from './nation-flag-angular.service';
+} from './nation-ngx-flag-token';
+import { NationNgxFlagService } from './nation-ngx-flag.service';
 
 @Component({
-  selector: 'nation-flag-angular',
+  selector: 'nation-ngx-flag',
   styles: [
     `
       :host {
@@ -61,7 +61,7 @@ import { NationFlagAngularRegistry } from './nation-flag-angular.service';
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class NationFlagAngularComponent {
+export class NationNgxFlagComponent {
   @Input() set fontSize(value: number | string) {
     this._fontSize = this.coerceCssPixelValue(value);
   }
@@ -100,7 +100,7 @@ export class NationFlagAngularComponent {
   constructor(
     @Inject(NGX_NATION_FlAG_CONFIG)
     private readonly config: NgxNationFlagConfig,
-    private readonly registry: NationFlagAngularRegistry,
+    private readonly registry: NationNgxFlagService,
   ) {
     this.variant = this.config.variant ?? 'none';
     this.showName = this.config.showName ?? true;

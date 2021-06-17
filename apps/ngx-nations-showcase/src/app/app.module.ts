@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgxNationsCoreModule } from '@nation/ngx-core';
+import { NationNgxCoreModule } from '@nation/ngx-core';
 
-import { NationFlagAngularModule } from '@nation/ngx-flag';
+import { NationNgxFlagModule } from '@nation/ngx-flag';
 import { nationFlagUa } from '@nation/tw-flags';
 import { LocaleEN, LocaleES, LocaleFR, LocalePT } from '@nation/i18n';
 
@@ -18,10 +18,10 @@ import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
     BrowserModule,
     AppRoutingModule,
     HighlightModule,
-    NgxNationsCoreModule.forRoot({
+    NationNgxCoreModule.forRoot({
       locales: [LocaleEN, LocaleES, LocaleFR, LocalePT],
     }),
-    NationFlagAngularModule.forRoot({
+    NationNgxFlagModule.forRoot({
       variant: 'combined',
       icons: [nationFlagUa],
     }),

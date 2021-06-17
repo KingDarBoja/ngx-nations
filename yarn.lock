@@ -91,6 +91,14 @@
     webpack-merge "5.7.3"
     webpack-subresource-integrity "1.5.2"
 
+"@angular-devkit/build-ng-packagr@~0.901.15":
+  version "0.901.15"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/build-ng-packagr/-/build-ng-packagr-0.901.15.tgz#e120c25106b57ce5c3d388114161f0f150b7fb2c"
+  integrity sha512-0WMHQ4U527JxIZG9hyLpcK8hKTMbPErzOudyqE9ebNyjhd9e5QGmkzLQEXLks7rSSAxnTpp9Q8jNHK6eVhUJUA==
+  dependencies:
+    "@angular-devkit/architect" "0.901.15"
+    rxjs "6.5.4"
+
 "@angular-devkit/build-optimizer@0.1200.0":
   version "0.1200.0"
   resolved "https://registry.yarnpkg.com/@angular-devkit/build-optimizer/-/build-optimizer-0.1200.0.tgz#ec1ab842f8e2327ac74ed5c04d0209899370a7b8"

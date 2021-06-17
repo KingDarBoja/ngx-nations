@@ -7,8 +7,8 @@ export type NgxNationLocaleEntry = {
 };
 
 export interface NgxNationsCoreConfig {
-  locales?: NgxNationLocaleEntry[];
-  defaultLocale?: NgxNationLocaleEntry;
+  locales: NgxNationLocaleEntry[];
+  defaultLocale: NgxNationLocaleEntry;
 }
 
 export const NGX_NATIONS_CORE_CONFIG = new InjectionToken<NgxNationsCoreConfig>(

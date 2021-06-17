@@ -6,43 +6,43 @@ import {
   Optional,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NgxNationsCoreModule } from '@nation/ngx-core';
-import { NationFlagAngularComponent } from './nation-flag-angular.component';
+import { NationNgxCoreModule } from '@nation/ngx-core';
+import { NationNgxFlagComponent } from './nation-ngx-flag.component';
 import {
   NationFlagSVG,
   NgxNationFlagConfig,
   NGX_NATION_FlAG_CONFIG,
   NGX_NATION_FLAG_ICON_CONFIG,
-} from './nation-di-tokens';
-import { NationFlagAngularRegistry } from './nation-flag-angular.service';
+} from './nation-ngx-flag-token';
+import { NationNgxFlagService } from './nation-ngx-flag.service';
 
 @NgModule({
-  imports: [CommonModule, NgxNationsCoreModule],
-  declarations: [NationFlagAngularComponent],
-  exports: [NationFlagAngularComponent],
+  imports: [CommonModule, NationNgxCoreModule],
+  declarations: [NationNgxFlagComponent],
+  exports: [NationNgxFlagComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class NationFlagAngularModule {
+export class NationNgxFlagModule {
   static forRoot(
     config: Partial<NgxNationFlagConfig> = {},
-  ): ModuleWithProviders<NationFlagAngularModule> {
+  ): ModuleWithProviders<NationNgxFlagModule> {
     return {
-      ngModule: NationFlagAngularModule,
+      ngModule: NationNgxFlagModule,
       providers: [
         {
           provide: NGX_NATION_FlAG_CONFIG,
           useValue: config,
         },
-        NationFlagAngularRegistry,
+        NationNgxFlagService,
       ],
     };
   }
 
   static forChild(
     icons: NationFlagSVG[],
-  ): ModuleWithProviders<NationFlagAngularModule> {
+  ): ModuleWithProviders<NationNgxFlagModule> {
     return {
-      ngModule: NationFlagAngularModule,
+      ngModule: NationNgxFlagModule,
       providers: [
         {
           provide: NGX_NATION_FLAG_ICON_CONFIG,
@@ -54,10 +54,10 @@ export class NationFlagAngularModule {
 
   constructor(
     @Optional() @Inject(NGX_NATION_FLAG_ICON_CONFIG) icons: NationFlagSVG[],
-    private nationFlagRegistry: NationFlagAngularRegistry,
+    private registry: NationNgxFlagService,
   ) {
     if (icons) {
-      this.nationFlagRegistry.register(icons);
+      this.registry.register(icons);
     }
   }
 }

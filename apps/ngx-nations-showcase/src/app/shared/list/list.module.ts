@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NationListComponent } from './list.component';
-import { NationFlagAngularModule } from '@nation/ngx-flag';
+import { NationNgxFlagModule } from '@nation/ngx-flag';
 import { HighlightModule } from 'ngx-highlightjs';
 
 @NgModule({
-  imports: [CommonModule, HighlightModule, NationFlagAngularModule],
+  imports: [CommonModule, HighlightModule, NationNgxFlagModule],
   exports: [NationListComponent],
   declarations: [NationListComponent],
 })
-export class NationListModule { }
+export class NationListModule {}

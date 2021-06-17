@@ -8,17 +8,17 @@ import {
 import { getName, LocaleCode } from '@nation/i18n';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { NgxNationsCoreService } from '../core.service';
+import { NationNgxCoreService } from '../nation-ngx-core.service';
 
 @Pipe({
   name: 'nationName',
   pure: false,
 })
-export class NationNamePipe implements PipeTransform, OnDestroy {
+export class NationNgxCoreNamePipe implements PipeTransform, OnDestroy {
   private readonly destroy$: Subject<boolean> = new Subject<boolean>();
 
   constructor(
-    private readonly config: NgxNationsCoreService,
+    private readonly config: NationNgxCoreService,
     private readonly cdr: ChangeDetectorRef,
   ) {
     this.config.locale$
@@ -32,6 +32,9 @@ export class NationNamePipe implements PipeTransform, OnDestroy {
     alternative?: number,
   ): string {
     const names = getName(value, locale ?? this.config.locale());
+    if (!names) {
+      return '';
+    }
     return Array.isArray(names)
       ? alternative
         ? names[alternative]
@@ -46,7 +49,7 @@ export class NationNamePipe implements PipeTransform, OnDestroy {
 }
 
 @NgModule({
-  declarations: [NationNamePipe],
-  exports: [NationNamePipe],
+  declarations: [NationNgxCoreNamePipe],
+  exports: [NationNgxCoreNamePipe],
 })
-export class NationNamePipeModule {}
+export class NationNgxCoreNamePipeModule {}

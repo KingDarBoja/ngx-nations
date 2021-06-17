@@ -25,7 +25,7 @@ import {
   nationFlagTv,
   nationFlagVu,
 } from '@nation/tw-flags';
-import { NationFlagAngularModule } from '@nation/ngx-flag';
+import { NationNgxFlagModule } from '@nation/ngx-flag';
 
 import { OceaniaComponent } from './oceania.component';
 import { OceaniaRoutingModule } from './oceania.routing';
@@ -37,7 +37,7 @@ import { NationListModule } from '../../shared/list/list.module';
     CommonModule,
     OceaniaRoutingModule,
     NationListModule,
-    NationFlagAngularModule.forChild([
+    NationNgxFlagModule.forChild([
       nationFlagAs,
       nationFlagAu,
       nationFlagCk,

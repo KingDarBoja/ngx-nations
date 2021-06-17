@@ -3,10 +3,11 @@ import {
   NationFlagSVG,
   NgxNationFlagConfig,
   NGX_NATION_FlAG_CONFIG,
-} from './nation-di-tokens';
+} from './nation-ngx-flag-token';
 
 @Injectable()
-export class NationFlagAngularRegistry {
+// export class NationFlagAngularRegistry {
+export class NationNgxFlagService {
   private readonly flagRegistryMap = new Map<string, string>();
 
   constructor(@Inject(NGX_NATION_FlAG_CONFIG) private readonly config: NgxNationFlagConfig) {

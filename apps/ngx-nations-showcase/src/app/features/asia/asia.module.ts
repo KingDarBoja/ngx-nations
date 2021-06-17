@@ -53,7 +53,7 @@ import {
   nationFlagVn,
   nationFlagYe,
 } from '@nation/tw-flags';
-import { NationFlagAngularModule } from '@nation/ngx-flag';
+import { NationNgxFlagModule } from '@nation/ngx-flag';
 
 import { AsiaComponent } from './asia.component';
 import { AsiaRoutingModule } from './asia.routing';
@@ -65,7 +65,7 @@ import { NationListModule } from '../../shared/list/list.module';
     CommonModule,
     AsiaRoutingModule,
     NationListModule,
-    NationFlagAngularModule.forChild([
+    NationNgxFlagModule.forChild([
       nationFlagAf,
       nationFlagAm,
       nationFlagAz,

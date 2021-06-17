@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgxNationsCoreService } from '@nation/ngx-core';
+import { NationNgxCoreService } from '@nation/ngx-core';
 import { map, startWith } from 'rxjs/operators';
 
 @Component({
@@ -20,7 +20,7 @@ export class AppComponent {
   yarn add @ngx-nations
   `;
   readonly importCode = `
-  import { NationFlagAngularModule } from '@nation/ngx-flag';
+  import { NationNgxFlagModule } from '@nation/ngx-flag';
   import { nationFlagUa } from '@nation/tw-flags';
   import { LocaleEN, LocaleES, LocaleFR, LocalePT } from '@nation/i18n';
 
@@ -31,7 +31,7 @@ export class AppComponent {
       NgxNationsCoreModule.forRoot({
         locales: [LocaleEN, LocaleES, LocaleFR, LocalePT],
       }),
-      NationFlagAngularModule.forRoot({
+      NationNgxFlagModule.forRoot({
         variant: 'combined',
         icons: [nationFlagUa],
       }),
@@ -45,20 +45,20 @@ export class AppComponent {
 
   @NgModule({
     imports: [
-      NationFlagAngularModule.forChild([nationFlagXX]),
+      NationNgxFlagModule.forChild([nationFlagXX]),
     ],
   })
   export class AppModule {}
   `;
   readonly configCode = `
-  <nation-flag-angular
+  <nation-ngx-flag
     [nation]="'to'"
     [variant]="'combined'"
     fontSize="100px"
-  ></nation-flag-angular>
+  ></nation-ngx-flag>
   `;
 
-  constructor(private readonly config: NgxNationsCoreService) {}
+  constructor(private readonly config: NationNgxCoreService) {}
 
   changeLocale(locale: string) {
     this.config.setLocale(locale);

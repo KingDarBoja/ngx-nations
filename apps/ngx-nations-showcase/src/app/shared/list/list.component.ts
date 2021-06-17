@@ -16,46 +16,46 @@ export interface NationData {
           <!-- <p class="nation-name">Colombia</p> -->
           <p class="nation-code">Style - Default (None)</p>
           <p class="nation-code">co</p>
-          <nation-flag-angular
+          <nation-ngx-flag
             [nation]="'co'"
             fontSize="100px"
-          ></nation-flag-angular>
+          ></nation-ngx-flag>
         </div>
         <div class="nation-item">
           <p class="nation-name">Style - Bordered</p>
           <p class="nation-code">tz</p>
-          <nation-flag-angular
+          <nation-ngx-flag
             [nation]="'tz'"
             [variant]="'bordered'"
             fontSize="100px"
-          ></nation-flag-angular>
+          ></nation-ngx-flag>
         </div>
         <div class="nation-item">
           <p class="nation-name">Style - None</p>
           <p class="nation-code">ua</p>
-          <nation-flag-angular
+          <nation-ngx-flag
             [nation]="'ua'"
             [variant]="'none'"
             fontSize="100px"
-          ></nation-flag-angular>
+          ></nation-ngx-flag>
         </div>
         <div class="nation-item">
           <p class="nation-name">Style - Wavy</p>
           <p class="nation-code">tj</p>
-          <nation-flag-angular
+          <nation-ngx-flag
             [nation]="'tj'"
             [variant]="'wavy'"
             fontSize="100px"
-          ></nation-flag-angular>
+          ></nation-ngx-flag>
         </div>
         <div class="nation-item">
           <p class="nation-name">Style - Combined</p>
           <p class="nation-code">to</p>
-          <nation-flag-angular
+          <nation-ngx-flag
             [nation]="'to'"
             [variant]="'combined'"
             fontSize="100px"
-          ></nation-flag-angular>
+          ></nation-ngx-flag>
         </div>
       </section>
 
@@ -65,10 +65,10 @@ export interface NationData {
           <div class="nation-item" *ngFor="let nation of nations">
             <!-- <p class="nation-name">{{ nation.name }}</p> -->
             <p class="nation-code">{{ nation.iconCode }}</p>
-            <nation-flag-angular
+            <nation-ngx-flag
               [nation]="nation.iconCode"
               fontSize="100px"
-            ></nation-flag-angular>
+            ></nation-ngx-flag>
           </div>
         </div>
       </section>

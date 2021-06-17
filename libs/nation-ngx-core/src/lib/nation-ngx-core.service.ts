@@ -1,11 +1,11 @@
 import { Inject, Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { BehaviorSubject, Subject } from 'rxjs';
 import { langs } from '@nation/i18n';
 import {
   NGX_NATIONS_CORE_CONFIG,
   NgxNationsCoreConfig,
   NgxNationLocaleEntry,
-} from './core-di-tokens';
+} from './nation-ngx-core-token';
 
 export interface NgxNationsConfiguration {
   /**
@@ -26,16 +26,17 @@ export interface NgxNationsConfiguration {
 }
 
 @Injectable({ providedIn: 'root' })
-export class NgxNationsCoreService {
-  readonly locale$: Subject<never> = new Subject();
-  private _locale: NgxNationLocaleEntry['locale'];
+export class NationNgxCoreService {
+  readonly locale$: BehaviorSubject<
+    NgxNationLocaleEntry['locale']
+  > = new BehaviorSubject(this.config.defaultLocale.locale);
+  private _locale: NgxNationLocaleEntry['locale'] = this.config.defaultLocale
+    .locale;
 
   constructor(
     @Inject(NGX_NATIONS_CORE_CONFIG)
     private readonly config: NgxNationsCoreConfig,
-  ) {
-    this.setLocale(this.config.defaultLocale.locale);
-  }
+  ) {}
 
   locale(): NgxNationLocaleEntry['locale'] {
     return this._locale;
@@ -43,7 +44,7 @@ export class NgxNationsCoreService {
 
   setLocale(locale: NgxNationLocaleEntry['locale']): void {
     this._locale = locale;
-    this.locale$.next();
+    this.locale$.next(locale);
   }
 
   /**

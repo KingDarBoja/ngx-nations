@@ -40,7 +40,7 @@ import {
   nationFlagVc,
   nationFlagVe,
 } from '@nation/tw-flags';
-import { NationFlagAngularModule } from '@nation/ngx-flag';
+import { NationNgxFlagModule } from '@nation/ngx-flag';
 
 import { AmericaComponent } from './america.component';
 import { AmericaRoutingModule } from './america.routing';
@@ -52,7 +52,7 @@ import { NationListModule } from '../../shared/list/list.module';
     CommonModule,
     AmericaRoutingModule,
     NationListModule,
-    NationFlagAngularModule.forChild([
+    NationNgxFlagModule.forChild([
       nationFlagAg,
       nationFlagAr,
       nationFlagAw,
